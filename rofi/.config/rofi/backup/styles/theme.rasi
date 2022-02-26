@@ -1,0 +1,17 @@
+/* colors */
+
+* {
+  background: #292d3e;
+  foreground: #a6accd;
+  selectionbackground: #717CB4;
+  selectionforeground: #ffffff;
+  secondbackground: #202331;
+  contrast: #202331;
+  accent: #ab47bc;
+  green: #c3e88d;
+  blue: #82aaff;
+  orange: #f78c6c;
+  red: #f07178;
+  purple: #c792ea;
+  cyan: #89ddff;
+}

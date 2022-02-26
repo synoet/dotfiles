@@ -1,0 +1,22 @@
+@import "config.rasi"
+
+window (
+       y-offset: 0;
+       children: [ listview ];
+       width 500px;
+       height: 250px;
+)
+
+listview {
+         scrollbar: false;
+}
+
+element: {
+         padding: 30px;
+         background-color: @bg-light;
+}
+
+element.selected {
+        background-color: @accent;
+        text-color: @bg;
+}
