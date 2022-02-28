@@ -41,11 +41,10 @@ configuration {
 /**** Layout ****/
 window {
   width:    1000px;
-  y-offset: -50px;
+  y-offset: -300px;
   anchor:   north;
   location: center;
   border: 1px;
-  border-radius: 6px 6px 0 0;
   children: [ inputbar, listview ];
 
 }
