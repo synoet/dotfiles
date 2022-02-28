@@ -1,10 +1,11 @@
 # teos dots ...
 
 ### dependencies
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- [picom](https://github.com/yshui/picom)
-- [i3-gaps](https://github.com/Airblader/i3) 
-- [polybar](https://github.com/jaagr/polybar) 
-- [rofi](https://github.com/davatorium/rofi)
-- [neovim](https://github.com/neovim)
-- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [oh-my-zsh (editor) ](https://github.com/robbyrussell/oh-my-zsh)
+- [picom (compositor) ](https://github.com/yshui/picom)
+- [i3-gaps (window manager) ](https://github.com/Airblader/i3) 
+- [polybar (status bar) ](https://github.com/jaagr/polybar) 
+- [rofi (launcher) ](https://github.com/davatorium/rofi)
+- [neovim (editor) ](https://github.com/neovim)
+- [kitty (terminal) ](https://sw.kovidgoyal.net/kitty/)
+- [dunst (notifications) ](https://sw.kovidgoyal.net/kitty/)
