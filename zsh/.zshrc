@@ -8,7 +8,12 @@ EDITOR='vim'
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  colorize
+)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_profile
