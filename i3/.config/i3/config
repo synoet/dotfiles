@@ -169,7 +169,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 #launch picom on startup
 #exec_always --no-startup-id picom --experimental-backends --backend glx --xrender-sync-fence
 
-bindsym $mod+space exec ~/.config/rofi/source/app_menu/launcher.sh
+bindsym $mod+space exec ~/.config/rofi/launch.sh
 
 assign [class="firefox"] 2
 assign [class="slack"] 3

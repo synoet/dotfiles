@@ -26,12 +26,11 @@ configuration {
   magenta: #bd93f9;
   blue:    #61bfff;
 
-  text-font:      "Fira Sans 15";
-  text-mono-font: "Fira Code 13";
+  text-font:      "Hasklug Nerd Font 26";
+  text-mono-font: "Hasklug Nerd Font Mono";
   /* icon-font:      "Hurmit Nerd Font Mono 26"; */
   icon-font:      "FontAwesome 20";
 
-  background-color: transparent;
   text-color: @fg-list;
   font: @text-font;
   border-color: @bg-dark;
@@ -41,6 +40,7 @@ configuration {
 /**** Layout ****/
 window {
   width:    1000px;
+  height:   500px;
   y-offset: -50px;
   anchor:   north;
   location: center;
