@@ -1,6 +1,6 @@
-#my dotfiles
+# teos dots ...
 
-# dependencies
+### dependencies
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [picom](https://github.com/yshui/picom)
 - [i3-gaps](https://github.com/Airblader/i3) 
