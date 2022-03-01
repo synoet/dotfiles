@@ -1,6 +1,7 @@
 # teos dots ...
 
 ### dependencies
+- [GNU Stow (dotfile manager)](https://www.gnu.org/software/stow/)
 - [oh-my-zsh (editor) ](https://github.com/robbyrussell/oh-my-zsh)
 - [picom (compositor) ](https://github.com/yshui/picom)
 - [i3-gaps (window manager) ](https://github.com/Airblader/i3) 
