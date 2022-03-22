@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/home/synoet/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
+  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",

@@ -1,5 +1,5 @@
 vim.o.termguicolors = true
-vim.g.ayu_mirage=true
+vim.g.ayucolor="mirage"
 
 vim.cmd [[
 try

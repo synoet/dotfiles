@@ -57,7 +57,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   use "dracula/vim"
-
+  use "Shatur/neovim-ayu"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

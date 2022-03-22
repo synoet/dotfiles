@@ -4,6 +4,8 @@ font pango:Hasklug Nerd Font Mono 12
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# exec_always --no-startup-id ~/.screenlayout/dual.sh
+
 exec --no-startup-id nm-applet
 
 workspace_layout tabbed
@@ -95,16 +97,16 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # multiple monitor setup
-# workspace $ws2 output DP-4
-# workspace $ws3 output DP-4
-# workspace $ws4 output DP-4
-# workspace $ws5 output DP-4
-# workspace $ws6 output DP-0
-# workspace $ws7 output DP-0
-# workspace $ws8 output DP-0
-# workspace $ws9 output DP-0
-# workspace $ws10 output DP-0
-#
+workspace $ws1 output DP-4
+workspace $ws2 output DP-4
+workspace $ws3 output DP-4
+workspace $ws4 output DP-4
+workspace $ws5 output DP-4
+workspace $ws6 output DP-0
+workspace $ws7 output DP-0
+workspace $ws8 output DP-0
+workspace $ws9 output DP-0
+workspace $ws10 output DP-0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -157,8 +159,10 @@ bindsym $mod+r mode "resize"
 #set background on startup
 exec_always --no-startup-id feh --bg-scale ~/purplewallpaper.png
 
+
 # set monitor output
 exec_always --no-startup-id xrandr --output DP-4 --mode 3840x2160 --rate 144.01
+
 
 #refresh fonts before launching polybar
 exec_always --no-startup-id fc-cache -f
