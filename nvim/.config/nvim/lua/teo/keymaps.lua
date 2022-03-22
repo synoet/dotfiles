@@ -30,7 +30,6 @@ keymap("n", "<Leader>f", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>t", ":Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>b", ":Telescope buffers<CR>", opts)
 
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
