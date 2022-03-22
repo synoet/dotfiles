@@ -157,7 +157,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set background on startup
-exec_always --no-startup-id feh --bg-scale ~/purplewallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/orangewallpaper.png
 
 
 # set monitor output
