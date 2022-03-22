@@ -16,8 +16,8 @@ bcyan = ${xrdb:color14}
 white = ${xrdb:color7}
 bwhite = ${xrdb:color15}
 
-bg = ${xrdb:background}
-fg = ${colors.magenta}
+bg = #14191F
+fg = ${colors.white}
 bg-alt = #1E2029
 fg-alt = #373844
 bg-dark = #181a23
@@ -66,13 +66,13 @@ font-3 = "Iosevka Nerd Font Mono:pixelsize=24;6"
 #modules-right =  wlan pad network-up pad network-down pad date
 modules-left = logo pad i3
 modules-center = xwindow
-modules-right = pulseaudio pad cpu pad memory pad fs wlan pad network-up pad network-down pad date
+modules-right = pulseaudio pad cpu pad memory pad fs pad network-down pad date
 
 
 [module/logo]
 type = custom/text
 content = 
-content-foreground = ${colors.green}
+content-foreground = ${colors.yellow}
 
 [module/window]
 type = internal/window
@@ -112,7 +112,7 @@ label-padding = 2
 
 label-focused = %icon% 
 label-focused-background = ${colors.bg-dark}
-label-focused-foreground = ${colors.fg}
+label-focused-foreground = ${colors.yellow}
 # label-focused-underline = ${colors.magenta}
 ; label-focused-foreground = ${xrdb:color2}
 label-focused-padding = 2
@@ -263,30 +263,6 @@ bar-used-fill = |
 bar-used-empty = ¦
 bar-used-empty-foreground = ${colors.fg-alt}
 
-[module/wlan]
-type = internal/network
-interface = wlan0
-interval = 3.0
-
-format-connected = <ramp-signal>
-format-disconnected =
-format-disconnected-foreground =
-
-; label-connected =
-; label-disconnected = !
-; label-disconnected-foreground = ${colors.red}
-
-ramp-signal-0 = 
-ramp-signal-0-foreground = ${colors.yellow}
-ramp-signal-1 = 
-ramp-signal-1-foreground = ${colors.yellow}
-ramp-signal-2 = 
-ramp-signal-2-foreground = ${colors.yellow}
-ramp-signal-3 = 
-ramp-signal-3-foreground = ${colors.accent}
-ramp-signal-4 = 
-ramp-signal-4-foreground = ${colors.fg}
-
 [module/network-up]
 type = internal/network
 interface = wlan0
@@ -303,7 +279,7 @@ format-disconnected-foreground = ${colors.alert}
 
 [module/network-down]
 type = internal/network
-interface = wlan0
+interface = enp37s0
 interval = 4.0
 label-connected = "%downspeed%"
 format-connected-prefix = " "
