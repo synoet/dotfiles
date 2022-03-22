@@ -39,24 +39,19 @@ packer.init {
 }
 
 return packer.startup(function(use)
+	-- Some Random Things
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-web-devicons" -- Icons for Neovim Tree
-  use "kyazdani42/nvim-tree.lua" -- tree
-  use "akinsho/bufferline.nvim" -- status line for buffers
   use "moll/vim-bbye" -- allows for deleting buffers and windows
-  use "nvim-lualine/lualine.nvim" -- status line for nvim
-  use "ahmedkhalf/project.nvim"
-  use "lewis6991/impatient.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
-  use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim"
 
-  use "Shatur/neovim-ayu"
+	-- Visual things
+  use "Shatur/neovim-ayu" -- Color Scheme
+  use "nvim-lualine/lualine.nvim" -- status line for nvim
+  use "lukas-reineke/indent-blankline.nvim"
+  use "kyazdani42/nvim-web-devicons" -- Icons for Neovim Tree
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -66,10 +61,11 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
+	-- snippet stuff
   use "L3MON4D3/LuaSnip"
-  use "folke/zen-mode.nvim"
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
+	-- lsp stuff
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
@@ -79,14 +75,21 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
+	-- Fuzzy Finder
+	use 'airblade/vim-rooter' -- root into base of curent files dir
+	use 'junegunn/fzf'
+	use 'junegunn/fzf.vim'
+
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
 
+	-- Typescript Stuff
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+	-- Show Git Diff on side panel
   use "lewis6991/gitsigns.nvim"
 
   if PACKER_BOOTSTRAP then
