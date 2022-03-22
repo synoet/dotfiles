@@ -1,9 +1,8 @@
 vim.o.termguicolors = true
-vim.g.ayucolor="mirage"
 
 vim.cmd [[
 try
-  colorscheme dracula
+  colorscheme ayu 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

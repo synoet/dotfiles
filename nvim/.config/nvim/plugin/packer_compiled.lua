@@ -229,11 +229,6 @@ _G.packer_plugins = {
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  vim = {
-    loaded = true,
-    path = "/home/synoet/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/dracula/vim"
-  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/vim-bbye",
