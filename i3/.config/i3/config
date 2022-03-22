@@ -190,8 +190,8 @@ gaps right 2
 gaps inner 10
 
 # class                         border          background      text            indicator       child_border
-client.focused                  #bd93f9         #1e2029         #bd93f9         #bd93f9       #bd93f9
-client.focused_inactive         #333333         #1e2029         #ffff33         $coloratt       #000000
-client.unfocused                #333333         #1e2029         #888888         $coloratt       #000000
+client.focused                  #FF8F40         #1F2430         #FF8F40         #FF8F40         #FF8F40
+client.focused_inactive         #FFCC66         #1e2029         #ffff33         $coloratt       #000000
+client.unfocused                #1C212B         #171B24         #888888         $coloratt       #000000
 client.urgent                   #2f343a         #1e2029         #ffffff         $coloratt       #900000
 client.placeholder              #000000         #1e2029         #ffffff         $coloratt       #0c0c0c
