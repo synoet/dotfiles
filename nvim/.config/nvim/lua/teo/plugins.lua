@@ -77,8 +77,6 @@ return packer.startup(function(use)
 
 	-- Fuzzy Finder
 	use 'airblade/vim-rooter' -- root into base of curent files dir
-	use 'junegunn/fzf'
-	use 'junegunn/fzf.vim'
 
   -- Treesitter
   use {
