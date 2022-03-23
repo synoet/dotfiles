@@ -90,6 +90,9 @@ return packer.startup(function(use)
 	-- Show Git Diff on side panel
   use "lewis6991/gitsigns.nvim"
 
+  -- Github Copilot --
+  use "github/copilot.vim"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

@@ -145,7 +145,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set background on startup
-exec_always --no-startup-id feh --bg-scale ~/city.jpg
+exec_always --no-startup-id feh --bg-scale ~/pixel.png
 
 
 # set monitor output
@@ -170,7 +170,7 @@ assign [class="Signal"] 3
 assign [class="microsoft teams - preview"] 3
 assign [class="Spotify"] 4
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps top 1
 gaps left 2
 gaps bottom 2
