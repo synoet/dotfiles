@@ -13,11 +13,11 @@ configuration {
 }
 
 * {
-  accent:   #bd93f9;
-  bg:       #1E2029FA;
-  bg-light: #1c1c1c;
-  bg-focus: #282a36;
-  bg-dark:  #181a23;
+  accent:   #FFB454;
+  bg:       #0B0E14;
+  bg-light: #14191F;
+  bg-focus: #0B0E14;
+  bg-dark:  #14191F;
   fg:       #bbc2cf;
   fg-list:  #bbc2cf;
   on:       #8BD49C;
@@ -45,6 +45,7 @@ window {
   anchor:   north;
   location: center;
   border: 1px;
+  border-color: @accent;
   children: [ inputbar, listview ];
 
 }
@@ -53,27 +54,14 @@ listview {
   lines: 12;
   fixed-height: false;
   /* reverse: true; */
-  columns: 2;
   scrollbar: true;
   spacing: 1px;
   /* Remove strange gap between listview and inputbar */
   margin: -2px 0 0;
 }
 
-/*
-  TODO Not supported in stable branch of rofi
-  @media only (max-height: 1080px) {
-    window {
-      y-offset: -30%;
-    }
-    listview {
-      lines: 14;
-    }
-  }
-*/
-
 scrollbar {
-  handle-width: 1px;
+  handle-width: 0px;
 }
 inputbar {
   children: [ textbox-icon, prompt, entry ];
@@ -86,7 +74,7 @@ textbox-icon, prompt {
   margin: 0 -2px 0 0;
 }
 textbox-icon {
-  padding: 7px 7px 7px 7px;
+  padding: 12px 20px 0px 20px;
 }
 entry, element {
   padding: 10px 13px;
@@ -113,7 +101,7 @@ prompt, entry {
   background-color: @bg-focus;
 }
 textbox-icon, prompt {
-  background-color: #2f313d;
+  background-color: @bg;
 }
 prompt {
   background-color: @bg-focus;
