@@ -10,14 +10,6 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -26,9 +18,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Telescope
-keymap("n", "<Leader>f", ":Telescope find_files<CR>", opts)
-keymap("n", "<Leader>t", ":Telescope live_grep<CR>", opts)
-keymap("n", "<Leader>b", ":Telescope buffers<CR>", opts)
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "<C-f>", ":Telescope live_grep<CR>", opts)
+keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
+keymap("n", "<C-t>", ":NvimTreeToggle<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

@@ -52,6 +52,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "kyazdani42/nvim-web-devicons" -- Icons for Neovim Tree
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "norcalli/nvim-colorizer.lua"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -60,6 +61,10 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+
+  -- tree things
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
 
 	-- snippet stuff
   use "L3MON4D3/LuaSnip"
