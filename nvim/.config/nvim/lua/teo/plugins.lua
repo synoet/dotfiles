@@ -84,10 +84,7 @@ return packer.startup(function(use)
 	use 'airblade/vim-rooter' -- root into base of curent files dir
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
+  use "nvim-treesitter/nvim-treesitter"
 
 	-- Typescript Stuff
   use "JoosepAlviste/nvim-ts-context-commentstring"
@@ -95,8 +92,6 @@ return packer.startup(function(use)
 	-- Show Git Diff on side panel
   use "lewis6991/gitsigns.nvim"
 
-  -- Github Copilot --
-  use "github/copilot.vim"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

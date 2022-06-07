@@ -31,7 +31,7 @@ width = 100%
 height = 34
 offset-x = 0
 offset-y = 0
-bottom = false
+bottom = true
 
 overline-size = 0
 overline-color = #f00
@@ -113,7 +113,7 @@ enable-click = true
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;ﭮ
+ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
@@ -178,15 +178,14 @@ exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
 interval = 100
 label = %output%
 
-format-prefix = "UPTIME"
+format-prefix = "UPTIME  "
 format-prefix-foreground = ${colors.orange}
 
 
 [module/date]
 type = internal/date
-
 interval = 1.0
-time = " %I:%M %p"
-time-alt = " %a, %d %b %Y"
+time = "[ %a %d - %I:%M %p ]"
+label-foreground = ${colors.orange}
 format = <label>
 label = %time%

@@ -4,7 +4,7 @@ font pango:Hasklug Nerd Font Mono 12
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# exec_always --no-startup-id ~/.screenlayout/dual.sh
+exec_always --no-startup-id ~/.screenlayout/dual.sh
 
 exec --no-startup-id nm-applet
 
@@ -71,6 +71,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+set $pmon DP-4
+set $smon HDMI-0
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -83,6 +86,17 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output $pmon
+workspace $ws2 output $pmon
+workspace $ws3 output $pmon
+workspace $ws4 output $pmon
+workspace $ws5 output $pmon
+workspace $ws6 output $smon
+workspace $ws7 output $smon
+workspace $ws8 output $smon
+workspace $ws9 output $smon
+workspace $ws10 output $smon
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -147,11 +161,6 @@ bindsym $mod+r mode "resize"
 #set background on startup
 exec_always --no-startup-id feh --bg-scale ~/city.png
 
-
-# set monitor output
-exec_always --no-startup-id xrandr --output DP-4 --mode 3840x2160 --rate 144.01
-
-
 #refresh fonts before launching polybar
 exec_always --no-startup-id fc-cache -f
 
@@ -171,12 +180,6 @@ assign [class="microsoft teams - preview"] 3
 assign [class="Spotify"] 4
 
 for_window [class="^.*"] border pixel 1
-gaps top 1
-gaps left 2
-gaps bottom 2
-gaps right 2
-gaps inner 10
-
 # class                         border          background      text            indicator       child_border
 client.focused                  #FF8F40         #1F2430         #FF8F40         #FF8F40         #FF8F40
 client.focused_inactive         #FFCC66         #1e2029         #ffff33         $coloratt       #000000
