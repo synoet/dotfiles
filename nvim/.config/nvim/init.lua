@@ -1,15 +1,39 @@
-require "teo.options"
-require "teo.keymaps"
-require "teo.plugins"
-require "teo.colorscheme"
-require "teo.cmp"
-require "teo.lsp"
-require "teo.telescope"
-require "teo.treesitter"
-require "teo.autopairs"
-require "teo.gitsigns"
-require "teo.lualine"
-require "teo.indentline"
-require "teo.autocommands"
-require "teo.nvimtree"
-require "teo.colorizer"
+return require('packer').startup(function()
+  -- package manager
+  use 'wbthomason/packer.nvim'
+
+  -- tree sitter
+  use 'nvim-treesitter/nvim-treesitter' 
+
+  -- quickly comment out lines
+  use 'tpope/vim-commentary'
+
+  -- telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/plenary.nvim'}}
+  }
+
+  -- neorg for documentation
+  use {
+    'nvim-neorg/neorg',
+    requires = {{'nvim-lua/plenary.nvim'}}
+  }
+
+  -- completion engine
+  use "hrsh7th/nvim-cmp"
+
+  -- status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- git
+  use {
+    'TimUntersberger/neogit',
+    requires = {{'nvim-lua/plenary.nvim'}}
+  }
+
+
+end)
