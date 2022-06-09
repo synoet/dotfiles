@@ -13,11 +13,16 @@ require('synoet.status')
 -- Indentation Config
 require('synoet.indent')
 
+
 -- Theme Config
 require('synoet.theme')
 
+
 -- Git Config
 require('synoet.git')
+
+-- Telescope Config
+require('synoet.telescope')
 
 
 local options = {
@@ -39,8 +44,6 @@ local options = {
   tabstop = 2,
   cursorline = true,
   number = true,
-  relativenumber = false,
-  numberwidth = 3,
   signcolumn = "yes",
   scrolloff = 8,
   sidescrolloff = 8,
@@ -71,6 +74,10 @@ return require('packer').startup(function()
   -- Git Signs
   use 'lewis6991/gitsigns.nvim'
 
+  -- Lsp 
+  use 'neovim/nvim-lspconfig'
+  use "williamboman/nvim-lsp-installer"
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -85,6 +92,7 @@ return require('packer').startup(function()
 
   -- completion engine
   use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-path"
 
   -- status line
   use {
