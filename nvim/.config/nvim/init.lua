@@ -13,7 +13,6 @@ require('synoet.status')
 -- Indentation Config
 require('synoet.indent')
 
-
 -- Theme Config
 require('synoet.theme')
 
