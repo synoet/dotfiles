@@ -16,12 +16,14 @@ require('synoet.indent')
 -- Theme Config
 require('synoet.theme')
 
-
 -- Git Config
 require('synoet.git')
 
 -- Telescope Config
 require('synoet.telescope')
+
+-- Completion config
+require('synoet.cmp')
 
 
 local options = {
@@ -76,6 +78,9 @@ return require('packer').startup(function()
   -- Lsp 
   use 'neovim/nvim-lspconfig'
   use "williamboman/nvim-lsp-installer"
+	--
+  -- Lua Snip
+  use "L3MON4D3/LuaSnip"
 
   -- telescope
   use {
