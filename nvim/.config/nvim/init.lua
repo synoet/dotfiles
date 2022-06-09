@@ -1,30 +1,21 @@
 -- Treesitter Config
 require('synoet.treesitter')
-
 -- Keymappings
 require('synoet.keymap')
-
 -- Neorg Config
 require('synoet.org')
-
 -- Lualine Config
 require('synoet.status')
-
 -- Indentation Config
 require('synoet.indent')
-
 -- Theme Config
 require('synoet.theme')
-
 -- Git Config
 require('synoet.git')
-
 -- Telescope Config
 require('synoet.telescope')
-
 -- Completion config
 require('synoet.cmp')
-
 -- Lsp Config
 require('synoet.lsp')
 
@@ -88,6 +79,12 @@ return require('packer').startup(function()
   -- telescope
   use {
     'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/plenary.nvim'}}
+  }
+
+  -- harpoon
+  use {
+    'ThePrimeagen/harpoon',
     requires = {{'nvim-lua/plenary.nvim'}}
   }
 
