@@ -1,14 +1,21 @@
+local function branding()
+  return [[ﬦ]]
+end
 require('lualine').setup {
   options = {
-    icons_enabled = true,
-    theme = 'auto',
+    icons_enabled = false,
+    theme = 'github_dark_default',
     globalStatus = true,
+    component_separators = { left = '|', right = '|'},
+    section_separators = { left = '', right = ''},
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {branding},
     lualine_b = {'filename'},
     lualine_c = {'branch', 'diff', 'diagnostics'},
-    lualine_z = {'buffers'}
+    lualine_x = {'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
   }
 
 }
