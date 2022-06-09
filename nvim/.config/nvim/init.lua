@@ -1,3 +1,47 @@
+-- Treesitter Config
+require('synoet.treesitter')
+
+-- Keymappings
+require('synoet.keymap')
+
+-- Neorg Config
+require('synoet.org')
+
+-- Lualine Config
+require('synoet.status')
+
+local options = {
+  cmdheight = 1,
+  completeopt = { "menuone",  "noselect" },
+  conceallevel = 0,
+  hlsearch = false,
+  ignorecase = true,
+  showmode = false,
+  showtabline = 0,
+  smartcase = true,
+  smartindent = true,
+  swapfile = false,
+  termguicolors = true,
+  timeoutlen = 100,
+  updatetime = 300,
+  expandtab= true,
+  shiftwidth = 2,
+  tabstop = 2,
+  cursorline = true,
+  number = true,
+  relativenumber = false,
+  numberwidth = 3,
+  signcolumn = "yes",
+  scrolloff = 8,
+  sidescrolloff = 8,
+  guifont = "monospace:h20",
+}
+
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
+
+
 return require('packer').startup(function()
   -- package manager
   use 'wbthomason/packer.nvim'
@@ -7,6 +51,9 @@ return require('packer').startup(function()
 
   -- quickly comment out lines
   use 'tpope/vim-commentary'
+
+  -- set characters for line indentations
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- telescope
   use {
@@ -35,5 +82,6 @@ return require('packer').startup(function()
     requires = {{'nvim-lua/plenary.nvim'}}
   }
 
-
 end)
+
+
