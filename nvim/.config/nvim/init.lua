@@ -10,6 +10,9 @@ require('synoet.org')
 -- Lualine Config
 require('synoet.status')
 
+-- Indentation Config
+require('synoet.indent')
+
 local options = {
   cmdheight = 1,
   completeopt = { "menuone",  "noselect" },
