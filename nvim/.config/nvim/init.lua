@@ -25,6 +25,9 @@ require('synoet.telescope')
 -- Completion config
 require('synoet.cmp')
 
+-- Lsp Config
+require('synoet.lsp')
+
 
 local options = {
   cmdheight = 1,
@@ -111,5 +114,3 @@ return require('packer').startup(function()
   }
 
 end)
-
-
