@@ -13,6 +13,13 @@ require('synoet.status')
 -- Indentation Config
 require('synoet.indent')
 
+-- Theme Config
+require('synoet.theme')
+
+-- Git Config
+require('synoet.git')
+
+
 local options = {
   cmdheight = 1,
   completeopt = { "menuone",  "noselect" },
@@ -56,7 +63,13 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
 
   -- set characters for line indentations
-  use "lukas-reineke/indent-blankline.nvim"
+  use 'lukas-reineke/indent-blankline.nvim'
+
+  -- Color Scheme
+  use 'projekt0n/github-nvim-theme'
+
+  -- Git Signs
+  use 'lewis6991/gitsigns.nvim'
 
   -- telescope
   use {
