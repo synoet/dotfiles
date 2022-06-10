@@ -82,12 +82,6 @@ return require('packer').startup(function()
     requires = {{'nvim-lua/plenary.nvim'}}
   }
 
-  -- harpoon
-  use {
-    'ThePrimeagen/harpoon',
-    requires = {{'nvim-lua/plenary.nvim'}}
-  }
-
   -- neorg for documentation
   use {
     'nvim-neorg/neorg',

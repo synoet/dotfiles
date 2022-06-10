@@ -21,8 +21,6 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 keymap("n", "<C-f>", ":Telescope live_grep<CR>", opts)
 keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
-keymap("n", "<C-h>", ":Telescope harpoon marks<CR>", opts) -- harpoon view
-keymap("n", "<C-m>", ":lua require('harpoon.mark').add_file()<CR>", opts)
 
 -- Buffer Navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)
