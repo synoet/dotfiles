@@ -17,8 +17,6 @@ require('telescope').setup{
     }
   },
   extensions = {
-    "harpoon"
   }
 }
 
-require('harpoon').setup{}
