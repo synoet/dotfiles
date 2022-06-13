@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-tabnine"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
+    url = "https://github.com/tzachar/cmp-tabnine"
+  },
   ["github-nvim-theme"] = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
@@ -158,25 +163,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-venom"] = {
-    config = { 'require("venom").setup()' },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/synoet/.local/share/nvim/site/pack/packer/opt/vim-venom",
-    url = "https://github.com/rafi/vim-venom"
   }
 }
 
 time([[Defining packer_plugins]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-venom'}, { ft = "python" }, _G.packer_plugins)]]
-time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

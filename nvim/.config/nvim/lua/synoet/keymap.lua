@@ -3,7 +3,6 @@ local keymap = vim.api.nvim_set_keymap
 
 -- Split Keymaps
 keymap("n", "<C-v>", ":vsplit<CR>", opts)
-keymap("n", "<C-s>", ":split<CR>", opts)
 
 -- Comment Keymaps
 keymap("n", "<C-c>", ":Commentary<CR>", opts)
@@ -21,6 +20,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 keymap("n", "<C-f>", ":Telescope live_grep<CR>", opts)
 keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
+keymap("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
 
 -- Buffer Navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)
