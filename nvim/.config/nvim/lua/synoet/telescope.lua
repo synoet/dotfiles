@@ -7,13 +7,16 @@ require('telescope').setup{
   },
   pickers = {
     find_files = {
-      theme = "ivy",
+      theme = "ivy"
     },
     buffers = {
-      theme = "ivy",
+      theme = "ivy"
     },
     live_grep = {
-      theme = "ivy",
+      theme = "ivy"
+    },
+    current_buffer_fuzzy_find = {
+      theme = "ivy"
     }
   },
   extensions = {
