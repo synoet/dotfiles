@@ -180,8 +180,8 @@ assign [class="Spotify"] 4
 
 for_window [class="^.*"] border pixel 1
 # class                         border          background      text            indicator       child_border
-client.focused                  #FF8F40         #1F2430         #FF8F40         #FF8F40         #FF8F40
-client.focused_inactive         #FFCC66         #1e2029         #ffff33         $coloratt       #000000
-client.unfocused                #1C212B         #171B24         #888888         $coloratt       #000000
+client.focused                  #3ddbd9         #161616         #dde1e6         #3ddbd9         #3ddbd9
+client.focused_inactive         #82cfff         #161616         #525252         $coloratt       #000000
+client.unfocused                #1C212B         #161616         #888888         $coloratt       #000000
 client.urgent                   #2f343a         #1e2029         #ffffff         $coloratt       #900000
 client.placeholder              #000000         #1e2029         #ffffff         $coloratt       #0c0c0c
