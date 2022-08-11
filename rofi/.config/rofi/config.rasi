@@ -13,11 +13,11 @@ configuration {
 }
 
 * {
-  accent:   #FFB454;
-  bg:       #0B0E14;
-  bg-light: #14191F;
-  bg-focus: #0B0E14;
-  bg-dark:  #14191F;
+  accent:   #33b1ff;
+  bg:       #161616;
+  bg-light: #161616;
+  bg-focus: #161616;
+  bg-dark:  #393939;
   fg:       #bbc2cf;
   fg-list:  #bbc2cf;
   on:       #8BD49C;
