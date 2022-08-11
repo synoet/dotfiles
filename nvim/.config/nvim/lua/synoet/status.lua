@@ -1,10 +1,10 @@
 local function branding()
   return [[ﬦ]]
 end
+
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'github_dark_default',
     globalStatus = true,
     component_separators = { left = '|', right = '|'},
     section_separators = { left = '', right = ''},

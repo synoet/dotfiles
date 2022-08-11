@@ -71,8 +71,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $pmon DP-4
-set $smon HDMI-0
+set $pmon DP-0
+set $smon DP-4
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -159,8 +159,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set background on startup
-exec_always --no-startup-id feh --bg-scale ~/city.png
-
+exec_always --no-startup-id feh --bg-scale ~/wallpapers/eternity_4k.png 
 #refresh fonts before launching polybar
 exec_always --no-startup-id fc-cache -f
 

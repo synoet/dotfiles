@@ -5,3 +5,4 @@ end
 
 require "synoet.lsp.installer"
 require("synoet.lsp.handlers").setup()
+require("lsp_lines").setup()
