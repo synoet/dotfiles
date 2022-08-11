@@ -1,16 +1,13 @@
 [colors]
-cyan = #3ddbd9
-magenta = #ee5396
-white=#f2f4f8
-blue = #33b1ff
+blue = #39BAE6
 yellow= #FFB454
 green = #AAD94C
 red = #F07178
 orange = #FF8F40
 
-bg = #161616
+bg = #0B0E14
 fg = ${colors.white}
-bg-alt = #393939
+bg-alt = #1F2430
 fg-alt = #373844
 bg-dark = #181a23
 bg-light = #11151C
@@ -54,8 +51,6 @@ font-0 = "Fira Code:pixelsize=13;2"
 font-1 = "Wuncon Siji:pixelsize=14;2"
 font-2 = "Siji:pixelsize=14;2"
 font-3 = "Iosevka Nerd Font Mono:pixelsize=24;6"
-font-4 = "Iosevka Nerd Font Mono:pixelsize=18;4"
-
 
 modules-left = logo pad i3 pad window
 modules-center = 
@@ -67,7 +62,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#78a9ff}%mountpoint%%{F-} %percentage_used%%
+label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
@@ -77,7 +72,7 @@ label-unmounted-foreground = ${colors.disabled}
 type = internal/pulseaudio
 
 format-volume-prefix = "VOL "
-format-volume-prefix-foreground = ${colors.blue}
+format-volume-prefix-foreground = ${colors.orange}
 format-volume = <label-volume>
 
 label-volume = %percentage%%
@@ -89,8 +84,8 @@ label-muted-foreground = ${colors.disabled}
 [module/logo]
 type = custom/text
 content = "ﬦ"
-content-foreground = ${colors.magenta}
-content-font = 5
+content-foreground = ${colors.orange}
+content-font = 2
 
 [module/blockleft]
 type = custom/text
@@ -105,7 +100,7 @@ content-foreground = ${fg-lighter}
 [module/window]
 type = internal/xwindow
 label = %title:0:0:0:0:.....%
-label-foreground = ${colors.white}
+label-foreground = ${colors.yellow}
 
 [module/pad]
 type = custom/text
@@ -117,24 +112,24 @@ type = internal/i3
 pin-workspaces = true
 enable-click = true
 
-ws-icon-0 = 1;1
-ws-icon-1 = 2;2
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;6
-ws-icon-6 = 7;7
-ws-icon-7 = 8;8
-ws-icon-8 = 9;9
-ws-icon-9 = 10;10
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 
 format = <label-state> <label-mode>
 label-padding = 2
 
 label-focused = %icon% 
 label-focused-background = ${colors.bg-dark}
-label-focused-foreground = ${colors.cyan}
-label-focused-underline = ${colors.cyan}
+label-focused-foreground = ${colors.yellow}
+label-focused-underline = ${colors.orange}
 label-focused-padding = 2
 
 label-occupied = %icon%
@@ -156,14 +151,14 @@ label-empty-padding = 2
 type = internal/memory
 interval = 2
 format-prefix = "RAM "
-format-prefix-foreground = ${colors.blue}
+format-prefix-foreground = ${colors.orange}
 label = %percentage_used:2%%
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = "CPU "
-format-prefix-foreground = ${colors.blue}
+format-prefix-foreground = ${colors.orange}
 label = %percentage:2%%
 
 [network-base]
@@ -171,12 +166,12 @@ type = internal/network
 interval = 5
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-disconnected = %{F#33b1ff}%ifname%%{F#707880} disconnected
+label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 
 [module/eth]
 inherit = network-base
 interface-type = wired
-label-connected = %{F#33b1ff}%ifname%%{F-} %local_ip%
+label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
 
 [module/uptime]
 type = custom/script
@@ -185,13 +180,13 @@ interval = 100
 label = %output%
 
 format-prefix = "UPTIME  "
-format-prefix-foreground = ${colors.blue}
+format-prefix-foreground = ${colors.orange}
 
 
 [module/date]
 type = internal/date
 interval = 1.0
 time = "[ %a %d - %I:%M %p ]"
-label-foreground = ${colors.white}
+label-foreground = ${colors.orange}
 format = <label>
 label = %time%
