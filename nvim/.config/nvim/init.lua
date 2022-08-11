@@ -42,11 +42,12 @@ end
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
+  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
   use 'nvim-treesitter/nvim-treesitter' 
   use 'tpope/vim-commentary'
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'projekt0n/github-nvim-theme'
   use 'lewis6991/gitsigns.nvim'
+  use 'navarasu/onedark.nvim'
 
   use 'neovim/nvim-lspconfig'
   use "williamboman/nvim-lsp-installer"
@@ -54,6 +55,16 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-nvim-lsp"
   use "L3MON4D3/LuaSnip"
+
+  use "github/copilot.vim"
+
+  use {
+    "folke/todo-comments.nvim",
+    requires = {{'nvim-lua/plenary.nvim'}},
+    config = function()
+      require("todo-comments").setup{}
+    end
+  }
 
   use {
     'nvim-telescope/telescope.nvim',
