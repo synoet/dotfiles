@@ -1,12 +1,8 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
+eval "$(starship init zsh)"
 export ZSH="$HOME/.oh-my-zsh"
 
 EDITOR='vim'
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git

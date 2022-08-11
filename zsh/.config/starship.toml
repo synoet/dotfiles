@@ -1,0 +1,35 @@
+right_format = """$cmd_duration$time"""
+
+[username]
+style_user = "red bold"
+style_root = "green bold"
+format = "[ﬦ]($style) "
+disabled = false
+show_always = true
+
+[character]
+success_symbol = "[➜](bold white)"
+error_symbol = "[✗](bold red)"
+
+[git_branch]
+symbol = ""
+truncation_length = 10
+truncation_symbol = ""
+
+[git_metrics]
+added_style = "bold blue"
+deleted_style = "bold red"
+format = '\[[+$added]($added_style) [-$deleted]($deleted_style)\] '
+only_nonzero_diffs = false
+disabled = false
+
+[cmd_duration]
+min_time = 5
+format = "[$duration](white)"
+
+[time]
+disabled = false
+style = "white"
+format = '  [\[ $time \]]($style) '
+time_format = "%T"
+
