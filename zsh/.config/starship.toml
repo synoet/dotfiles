@@ -13,7 +13,6 @@ error_symbol = "[✗](bold red)"
 
 [git_branch]
 symbol = ""
-truncation_length = 10
 truncation_symbol = ""
 
 [git_metrics]
