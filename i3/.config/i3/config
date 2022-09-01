@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Hasklug Nerd Font Mono 12
+font pango:Iosevka Nerd Font Bold 12
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
@@ -21,8 +21,6 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 
 bindsym $mod+Shift+q kill
-
-bindsym $mod+d exec --no-startup-id dmenu_run
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -159,7 +157,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set background on startup
-exec_always --no-startup-id feh --bg-scale ~/wallpapers/eternity_4k.png 
+exec_always --no-startup-id feh --bg-scale /home/synoet/wallpapers/sphere.jpeg 
+
 #refresh fonts before launching polybar
 exec_always --no-startup-id fc-cache -f
 
@@ -167,21 +166,17 @@ exec_always --no-startup-id fc-cache -f
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 #launch picom on startup
-#exec_always --no-startup-id picom --experimental-backends --backend glx --xrender-sync-fence
+exec_always --no-startup-id picom --experimental-backends --backend glx --xrender-sync-fence
 
 bindsym $mod+space exec ~/.config/rofi/launch.sh
 
-assign [class="firefox"] 2
-assign [class="slack"] 3
-assign [class="Discord"] 3
-assign [class="Signal"] 3
-assign [class="microsoft teams - preview"] 3
-assign [class="Spotify"] 4
+gaps inner 10
 
 for_window [class="^.*"] border pixel 1
 # class                         border          background      text            indicator       child_border
-client.focused                  #3ddbd9         #161616         #dde1e6         #3ddbd9         #3ddbd9
-client.focused_inactive         #82cfff         #161616         #525252         $coloratt       #000000
-client.unfocused                #1C212B         #161616         #888888         $coloratt       #000000
-client.urgent                   #2f343a         #1e2029         #ffffff         $coloratt       #900000
-client.placeholder              #000000         #1e2029         #ffffff         $coloratt       #0c0c0c
+client.focused                  #FF8F40         #0d1017         #dde1e6         #FF8F40         #FF8F40
+client.focused_inactive         #82cfff         #0d1017         #525252         $coloratt       #000000
+client.unfocused                #1C212B         #0d1017         #888888         $coloratt       #000000
+client.urgent                   #2f343a         #0d1017         #ffffff         $coloratt       #900000
+client.placeholder              #000000         #0d1017         #ffffff         $coloratt       #0c0c0c
+

@@ -1,17 +1,17 @@
 [colors]
-cyan = #3ddbd9
-magenta = #ee5396
+cyan = #39bae6
+magenta = #D2a6ff
 white=#f2f4f8
 blue = #33b1ff
-yellow= #FFB454
+yellow= #ffb454
 green = #AAD94C
-red = #F07178
-orange = #FF8F40
+red = #f26d78
+orange = #ffb454
 
-bg = #161616
+bg = #0d1017
 fg = ${colors.white}
-bg-alt = #393939
-fg-alt = #373844
+bg-alt = #131721
+fg-alt = #565b66
 bg-dark = #181a23
 bg-light = #11151C
 fg-lighter = #707A8C
@@ -53,13 +53,30 @@ odule-margin-right = 0
 font-0 = "Fira Code:pixelsize=13;2"
 font-1 = "Wuncon Siji:pixelsize=14;2"
 font-2 = "Siji:pixelsize=14;2"
-font-3 = "Iosevka Nerd Font Mono:pixelsize=24;6"
+font-3 = "Iosevka Nerd Font Mono:pixelsize=24;4"
 font-4 = "Iosevka Nerd Font Mono:pixelsize=18;4"
 
 
 modules-left = logo pad i3 pad window
 modules-center = 
-modules-right = blockleft filesystem pad paudio pad cpu pad memory pad eth  pad uptime blockright pad date
+modules-right = pulseaudio pad cpu pad memory pad eth pad uptime pad date
+
+
+[module/eth]
+type = internal/network
+interface =  enp37s0
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected-foreground        = ${colors.foreground}
+format-connected-background        = ${colors.bg-alt}
+format-connected-prefix            = 
+format-connected-prefix-foreground = ${colors.green}
+format-connected-prefix-padding    = 1
+label-connected                    = %local_ip%
+label-connected-foreground = ${colors.foreground}
+label-connected-padding            = 1
 
 [module/filesystem]
 type = internal/fs
@@ -68,44 +85,54 @@ interval = 25
 mount-0 = /
 
 label-mounted = %{F#78a9ff}%mountpoint%%{F-} %percentage_used%%
-
+format-background = ${colors.bg-alt}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
 
-# audio
-[module/paudio]
+[module/pulseaudio]
 type = internal/pulseaudio
+use-ui-max = false
 
-format-volume-prefix = "VOL "
-format-volume-prefix-foreground = ${colors.blue}
-format-volume = <label-volume>
 
-label-volume = %percentage%%
+format-volume            = <ramp-volume><label-volume>
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.bg-alt}
+label-volume             = %percentage%%
+label-volume-foreground = ${colors.foreground}
+label-volume-padding     = 1
 
-label-muted = muted
-label-muted-foreground = ${colors.disabled}
+format-muted-foreground     = ${colors.alert}
+format-muted-background     = ${self.format-volume-background}
+format-muted-prefix         = ﱝ
+format-muted-prefix-padding = 1
+label-muted-foreground = ${colors.foreground}
+label-muted                 = Muted
+label-muted-padding         = ${self.label-volume-padding}
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 墳
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-padding = 1
+ramp-volume-foreground = ${colors.cyan}
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+click-right = pavucontrol&
 
 # nice to have an icon 
 [module/logo]
 type = custom/text
 content = "ﬦ"
-content-foreground = ${colors.magenta}
+content-foreground = ${colors.orange}
 content-font = 5
-
-[module/blockleft]
-type = custom/text
-content = "[ "
-content-foreground = ${fg-lighter}
-
-[module/blockright]
-type = custom/text
-content = " ]"
-content-foreground = ${fg-lighter}
 
 [module/window]
 type = internal/xwindow
 label = %title:0:0:0:0:.....%
-label-foreground = ${colors.white}
+label-foreground = ${colors.fg-alt}
 
 [module/pad]
 type = custom/text
@@ -152,46 +179,57 @@ label-empty = %icon%
 label-empty-foreground = ${colors.fg-alt}
 label-empty-padding = 2
 
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = "RAM "
-format-prefix-foreground = ${colors.blue}
-label = %percentage_used:2%%
-
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "CPU "
-format-prefix-foreground = ${colors.blue}
-label = %percentage:2%%
 
-[network-base]
-type = internal/network
-interval = 5
-format-connected = <label-connected>
-format-disconnected = <label-disconnected>
-label-disconnected = %{F#33b1ff}%ifname%%{F#707880} disconnected
+format-prefix            = 
+format-padding    = 3
+format-prefix-foreground = ${colors.red}
+label                    = %percentage:2%%
+label-foreground = ${colors.foreground}
+format-background = ${colors.bg-alt}
+format-prefix-padding = 1
+label-padding = 1
 
-[module/eth]
-inherit = network-base
-interface-type = wired
-label-connected = %{F#33b1ff}%ifname%%{F-} %local_ip%
 
 [module/uptime]
 type = custom/script
 exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
 interval = 100
 label = %output%
-
-format-prefix = "UPTIME  "
+format-background = ${colors.bg-alt}
+format-prefix-padding = 1
+label-padding = 1
+format-prefix = "ﰇ"
 format-prefix-foreground = ${colors.blue}
-
 
 [module/date]
 type = internal/date
-interval = 1.0
-time = "[ %a %d - %I:%M %p ]"
-label-foreground = ${colors.white}
-format = <label>
-label = %time%
+interval = 1
+
+format                = <label>
+format-foreground     = ${colors.foreground}
+format-background     = ${colors.bg-alt}
+format-prefix         = 
+format-prefix-foreground = ${colors.magenta}
+format-prefix-padding = 1
+label                 = %time%
+label-foreground = ${colors.foreground}
+label-padding         = 1
+time                  = %b %d, %H:%M
+time-alt              = %A, %d %B %Y
+
+
+[module/memory]
+type = internal/memory
+interval = 2
+
+format-prefix            = 
+format-padding = 0
+format-prefix-foreground = ${colors.orange}
+format-background = ${colors.bg-alt}
+format-prefix-padding = 1
+label                    = %mb_used%
+label-foreground = ${colors.foreground}
+label-padding            = 1

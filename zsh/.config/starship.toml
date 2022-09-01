@@ -1,9 +1,9 @@
 right_format = """$cmd_duration$time"""
 
 [username]
-style_user = "red bold"
-style_root = "green bold"
-format = "[ﬦ]($style) "
+style_user = "yellow bold"
+style_root = "red bold"
+format = "[synoet::]($style)"
 disabled = false
 show_always = true
 

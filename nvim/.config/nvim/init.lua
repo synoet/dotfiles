@@ -45,7 +45,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   --
   -- colorscheme
-  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
+  use "Shatur/neovim-ayu"
 
   use 'nvim-treesitter/nvim-treesitter' 
   use 'tpope/vim-commentary'
@@ -59,13 +59,6 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-nvim-lsp"
   use "L3MON4D3/LuaSnip"
-
-  use {
-  "chrisbra/Colorizer",
-    config = function()
-      require("vim-css-color").setup{}
-    end
-  }
 
   use "github/copilot.vim"
 
