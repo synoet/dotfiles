@@ -13,11 +13,11 @@ configuration {
 }
 
 * {
-  accent:   #33b1ff;
-  bg:       #161616;
-  bg-light: #161616;
-  bg-focus: #161616;
-  bg-dark:  #393939;
+  accent:   #FFB454;
+  bg:       #0d1017;
+  bg-light: #131721;
+  bg-focus: #0b0e14;
+  bg-dark:  #11151c;
   fg:       #bbc2cf;
   fg-list:  #bbc2cf;
   on:       #8BD49C;
@@ -26,8 +26,8 @@ configuration {
   magenta: #bd93f9;
   blue:    #61bfff;
 
-  text-font:      "Fira Sans 15";
-  text-mono-font: "Fira Code 13";
+  text-font:      "Iosevka Nerd Font 15";
+  text-mono-font: "Iosevka Nerd Font 13";
   /* icon-font:      "Hurmit Nerd Font Mono 26"; */
   icon-font:      "FontAwesome 16";
 

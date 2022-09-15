@@ -63,6 +63,22 @@ return require('packer').startup(function()
   use "github/copilot.vim"
 
   use {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {
+        window = {
+            backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+            width = 500, -- width of the Zen window
+            height = 1, -- height of the Zen window
+            options = {
+
+            },
+          },
+      }
+    end
+  }
+
+  use {
     "folke/todo-comments.nvim",
     requires = {{'nvim-lua/plenary.nvim'}},
     config = function()

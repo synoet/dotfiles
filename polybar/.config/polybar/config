@@ -136,7 +136,7 @@ label-foreground = ${colors.fg-alt}
 
 [module/pad]
 type = custom/text
-content = "   "
+content = " "
 content-foreground = ${colors.fg-alt}
 
 [module/i3]
