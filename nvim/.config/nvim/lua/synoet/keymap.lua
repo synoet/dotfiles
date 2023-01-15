@@ -1,5 +1,8 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
+vim.api.nvim_set_var("mapleader", ",")
+
+keymap("n", "<Leader>f", ":HopWord<CR>", opts)
 
 -- Split Keymaps
 keymap("n", "<C-v>", ":vsplit<CR>", opts)

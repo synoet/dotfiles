@@ -1,5 +1,7 @@
 eval "$(starship init zsh)"
 export ZSH="$HOME/.oh-my-zsh"
+export BAT_THEME="TwoDark"
+export GPG_TTY=$(tty)
 
 EDITOR='vim'
 
@@ -9,6 +11,7 @@ plugins=(
   zsh-syntax-highlighting
   colorize
   fzf-tab
+  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -22,5 +25,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Created by `pipx` on 2022-05-20 18:28:47
-export PATH="$PATH:/home/synoet/.local/bin"
+export PATH="$PATH:/Users/synoet/.local/bin"
+
+#eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

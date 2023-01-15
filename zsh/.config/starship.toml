@@ -7,10 +7,6 @@ format = "[synoet::]($style)"
 disabled = false
 show_always = true
 
-[character]
-success_symbol = "[➜](bold white)"
-error_symbol = "[✗](bold red)"
-
 [git_branch]
 symbol = ""
 truncation_symbol = ""

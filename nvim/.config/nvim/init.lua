@@ -11,7 +11,7 @@ require('synoet.lsp')
 
 local options = {
   cmdheight = 1,
-  completeopt = { "menuone",  "noselect" },
+  completeopt = { "menuone", "noselect" },
   conceallevel = 0,
   hlsearch = false,
   ignorecase = true,
@@ -23,7 +23,7 @@ local options = {
   termguicolors = true,
   timeoutlen = 100,
   updatetime = 300,
-  expandtab= true,
+  expandtab = true,
   shiftwidth = 2,
   tabstop = 2,
   cursorline = true,
@@ -34,7 +34,7 @@ local options = {
   guifont = "monospace:h20",
 }
 
-vim.diagnostic.config({virtual_lines = true})
+vim.diagnostic.config({ virtual_lines = true })
 
 for k, v in pairs(options) do
   vim.opt[k] = v
@@ -43,15 +43,18 @@ end
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  --
-  -- colorscheme
-  use "Shatur/neovim-ayu"
 
-  use 'nvim-treesitter/nvim-treesitter' 
+  use 'shatur/neovim-ayu'
+  use { 'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+  -- using packer.nvim
+  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+
+  use 'navarasu/onedark.nvim'
+  use 'nvim-treesitter/nvim-treesitter'
   use 'tpope/vim-commentary'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'lewis6991/gitsigns.nvim'
-  use 'navarasu/onedark.nvim'
 
   use 'neovim/nvim-lspconfig'
   use "williamboman/nvim-lsp-installer"
@@ -63,37 +66,39 @@ return require('packer').startup(function()
   use "github/copilot.vim"
 
   use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
+
+
+  use {
     "folke/zen-mode.nvim",
     config = function()
       require("zen-mode").setup {
         window = {
-            backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
-            width = 500, -- width of the Zen window
-            height = 1, -- height of the Zen window
-            options = {
+          backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+          width = 500, -- width of the Zen window
+          height = 1, -- height of the Zen window
+          options = {
 
-            },
           },
+        },
       }
     end
   }
 
   use {
-    "folke/todo-comments.nvim",
-    requires = {{'nvim-lua/plenary.nvim'}},
-    config = function()
-      require("todo-comments").setup{}
-    end
-  }
-
-  use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/plenary.nvim'}}
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use {
     'nvim-neorg/neorg',
-    requires = {{'nvim-lua/plenary.nvim'}}
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use {
@@ -103,13 +108,13 @@ return require('packer').startup(function()
 
   use {
     'TimUntersberger/neogit',
-    requires = {{'nvim-lua/plenary.nvim'}}
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use {
     'tzachar/cmp-tabnine',
-    run='./install.sh',
-    requires={{'nvim-lua/plenary.nvim'}}
+    run = './install.sh',
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use({
