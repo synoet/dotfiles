@@ -1,5 +1,5 @@
 local function branding()
-  return [[ﬦ]]
+  return [[-]]
 end
 
 require('lualine').setup {

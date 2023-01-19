@@ -10,6 +10,7 @@ show_always = true
 [git_branch]
 symbol = ""
 truncation_symbol = ""
+format= "[$branch]($style) "
 
 [git_metrics]
 added_style = "bold blue"
@@ -28,3 +29,8 @@ style = "white"
 format = '  [\[ $time \]]($style) '
 time_format = "%T"
 
+[nodejs]
+disabled = true
+
+[python]
+disabled = false
