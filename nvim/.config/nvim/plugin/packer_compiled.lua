@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -145,6 +150,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/neovim-ayu",
     url = "https://github.com/shatur/neovim-ayu"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -210,10 +220,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lsp_lines.nvim
-time([[Config for lsp_lines.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
-time([[Config for lsp_lines.nvim]], false)
 -- Config for: hop.nvim
 time([[Config for hop.nvim]], true)
 try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop.nvim")
@@ -222,6 +228,10 @@ time([[Config for hop.nvim]], false)
 time([[Config for zen-mode.nvim]], true)
 try_loadstring("\27LJ\2\n…\1\0\0\5\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0005\3\3\0004\4\0\0=\4\4\3=\3\6\2B\0\2\1K\0\1\0\vwindow\1\0\0\foptions\1\0\3\vheight\3\1\nwidth\3ô\3\rbackdrop\4æÌ™³\6æÌ¹ÿ\3\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
 time([[Config for zen-mode.nvim]], false)
+-- Config for: lsp_lines.nvim
+time([[Config for lsp_lines.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
+time([[Config for lsp_lines.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

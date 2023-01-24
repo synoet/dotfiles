@@ -50,7 +50,6 @@ return require('packer').startup(function()
   -- using packer.nvim
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
-  use 'navarasu/onedark.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use 'tpope/vim-commentary'
   use 'lukas-reineke/indent-blankline.nvim'
@@ -62,6 +61,9 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-nvim-lsp"
   use "L3MON4D3/LuaSnip"
+  use "shaunsingh/nord.nvim"
+  use {"catppuccin/nvim", as = "catppuccin"}
+  use "navarasu/onedark.nvim"
 
   use "github/copilot.vim"
 

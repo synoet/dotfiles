@@ -23,7 +23,7 @@ enable-fzf-tab
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init -)" >/dev/null
 
 export PATH="$PATH:/Users/synoet/.local/bin"
 
