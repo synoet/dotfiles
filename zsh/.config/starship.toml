@@ -2,7 +2,7 @@ right_format = """$cmd_duration$time"""
 add_newline = true
 
 [username]
-style_user = "purple bold"
+style_user = "yellow bold"
 style_root = "red bold"
 format = "[synoet::]($style)"
 disabled = false
