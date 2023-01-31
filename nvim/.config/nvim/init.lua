@@ -44,7 +44,6 @@ end
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
-  use 'shatur/neovim-ayu'
   use { 'nvim-telescope/telescope-fzf-native.nvim',
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   -- using packer.nvim
@@ -61,8 +60,8 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-nvim-lsp"
   use "L3MON4D3/LuaSnip"
-  use "shaunsingh/nord.nvim"
-  use {"catppuccin/nvim", as = "catppuccin"}
+  --
+  -- color scheme
   use "navarasu/onedark.nvim"
 
   use "github/copilot.vim"
@@ -99,24 +98,8 @@ return require('packer').startup(function()
   }
 
   use {
-    'nvim-neorg/neorg',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-
-  use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-
-  use {
-    'TimUntersberger/neogit',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-
-  use {
-    'tzachar/cmp-tabnine',
-    run = './install.sh',
-    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use({
@@ -125,5 +108,18 @@ return require('packer').startup(function()
       require("lsp_lines").setup()
     end,
   })
+
+  use {
+  "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
 end)
