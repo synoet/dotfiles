@@ -109,17 +109,28 @@ return require('packer').startup(function()
     end,
   })
 
+
+    -- install without yarn or npm
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+
   use {
-  "folke/which-key.nvim",
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
     config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-      require("which-key").setup {
+      require("trouble").setup {
         -- your configuration comes here
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
       }
     end
   }
+
+
 
 end)
