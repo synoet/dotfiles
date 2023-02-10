@@ -8,10 +8,7 @@ keymap("n", "<Leader>f", ":HopWord<CR>", opts)
 keymap("n", "<C-v>", ":vsplit<CR>", opts)
 
 -- Comment Keymaps
-keymap("n", "<C-c>", ":Commentary<CR>", opts)
-
--- Neogit Keymaps
-keymap("n", "<C-g>", ":Neogit<CR>", opts)
+keymap("n", "<C-/>", ":Commentary<CR>", opts)
 
 -- Split Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -24,6 +21,10 @@ keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 keymap("n", "<C-f>", ":Telescope live_grep<CR>", opts)
 keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
 keymap("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
+
+
+-- LSP Keybindings
+keymap("n", "<C-r>", ":LspRestart <CR>", opts)
 
 -- Buffer Navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)

@@ -3,7 +3,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export BAT_THEME="TwoDark"
 export GPG_TTY=$(tty)
 
-EDITOR='vim'
+export EDITOR='nvim'
+
 
 plugins=(
   git
@@ -11,7 +12,7 @@ plugins=(
   zsh-syntax-highlighting
   colorize
   fzf-tab
-  zsh-vi-mode
+#  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
