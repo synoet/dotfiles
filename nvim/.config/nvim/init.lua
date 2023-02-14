@@ -58,5 +58,6 @@ return require('packer').startup(function()
   use "sindrets/diffview.nvim"
 
   use "navarasu/onedark.nvim"
+  use "folke/tokyonight.nvim"
 
 end)
