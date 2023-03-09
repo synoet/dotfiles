@@ -12,6 +12,7 @@ plugins=(
   zsh-syntax-highlighting
   colorize
   fzf-tab
+  zshpilot
 #  zsh-vi-mode
 )
 
@@ -19,6 +20,9 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh_profile
 
 enable-fzf-tab
+
+alias f='cd $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv | fzf)'
+
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -31,3 +35,4 @@ export PATH="$PATH:/Users/synoet/.local/bin"
 #eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1

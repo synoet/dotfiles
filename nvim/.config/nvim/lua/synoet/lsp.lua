@@ -61,6 +61,14 @@ require('mason-null-ls').setup({
   automatic_setup = true,
 })
 
+require("mason-lspconfig").setup()
+
 require('mason-null-ls').setup_handlers()
 
 require('lsp_lines').setup()
+
+local util = require('lspconfig/util')
+
+require("lspconfig").pyright.setup({
+  root_dir = util.root_pattern('pyproject.toml', 'setup.py', 'setup.cfg', '.git'),
+})

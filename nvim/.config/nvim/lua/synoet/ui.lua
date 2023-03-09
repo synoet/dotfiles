@@ -3,17 +3,6 @@ vim.opt.termguicolors = true
 require("bufferline").setup{}
 
 require("telescope").setup{
-  pickers = {
-    current_buffer_fuzzy_find = {
-      theme = "ivy",
-    },
-    find_files = {
-      theme = "ivy",
-    },
-    live_grep = {
-      theme = "ivy",
-    },
-  },
   extensions = {
     fzf = {
       fuzzy = true,
@@ -25,9 +14,14 @@ require("telescope").setup{
 }
 
 require('telescope').load_extension('fzf')
+require('telescope').load_extension("refactoring")
 
 
-require("lualine").setup{}
+require('lualine').setup({
+  options = {
+    theme = 'ayu',
+  },
+})
 
 require('gitsigns').setup {
   signs = {

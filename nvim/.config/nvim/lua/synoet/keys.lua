@@ -21,6 +21,7 @@ keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 keymap("n", "<C-f>", ":Telescope live_grep<CR>", opts)
 keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
 keymap("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
+keymap("v", "<C-x>", ":lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
 
 
 -- LSP Keybindings

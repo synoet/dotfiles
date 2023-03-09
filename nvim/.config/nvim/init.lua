@@ -19,6 +19,8 @@ return require('packer').startup(function()
   use "jay-babu/mason-null-ls.nvim"
   use "folke/trouble.nvim"
   use "VonHeikemen/lsp-zero.nvim"
+  use "ThePrimeagen/refactoring.nvim"
+
   use({
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     config = function()
@@ -26,10 +28,8 @@ return require('packer').startup(function()
     end,
   })
 
-
   use "nvim-treesitter/nvim-treesitter"
   use 'nvim-treesitter/nvim-treesitter-context'
-
 
   -- completion
   use "hrsh7th/nvim-cmp"
@@ -57,7 +57,6 @@ return require('packer').startup(function()
   use "lewis6991/gitsigns.nvim"
   use "sindrets/diffview.nvim"
 
-  use "navarasu/onedark.nvim"
   use "folke/tokyonight.nvim"
 
 end)
