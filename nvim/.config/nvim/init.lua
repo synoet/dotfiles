@@ -43,6 +43,7 @@ return require('packer').startup(function()
   -- misc
   use "lukas-reineke/indent-blankline.nvim"
   use "phaazon/hop.nvim"
+  use "brenoprata10/nvim-highlight-colors"
 
   -- ui
   use "MunifTanjim/nui.nvim"

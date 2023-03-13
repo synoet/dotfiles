@@ -17,11 +17,11 @@ require('telescope').load_extension('fzf')
 require('telescope').load_extension("refactoring")
 
 
-require('lualine').setup({
+require('lualine').setup {
   options = {
-    theme = 'ayu',
-  },
-})
+    theme = 'tokyonight'
+  }
+}
 
 require('gitsigns').setup {
   signs = {

@@ -1,20 +1,21 @@
+# vim:ft=config:
 [colors]
-cyan = #39bae6
-magenta = #D2a6ff
-white=#f2f4f8
-blue = #33b1ff
-yellow= #ffb454
-green = #AAD94C
-red = #f26d78
-orange = #ffb454
+cyan = #7dcfff
+magenta = #bb9af7
+white=#c0caf5
+blue = #7aa2f7
+yellow= #e0af68
+green = #9ece6a
+red = #f7768e
+orange = #e0af68
 
-bg = #0d1017
+bg = #1a1b26
 fg = ${colors.white}
 bg-alt = #131721
-fg-alt = #565b66
-bg-dark = #181a23
+fg-alt = #414868
+bg-dark = #15161e
 bg-light = #11151C
-fg-lighter = #707A8C
+fg-lighter = #414868
 
 alert = ${colors.yellow}
 accent = #604c7e
@@ -43,39 +44,37 @@ underline-color = #00f
 
 border-bottom-size = 0
 border-top-size = 1
-border-color = ${colors.bg-dark}
+border-color = ${colors.bg}
 
 padding-left = 2
 padding-right = 2
 module-margin-left = 0
 odule-margin-right = 0
 
-font-0 = "Fira Code:pixelsize=13;2"
+font-0 = "PragmataPro Mono Liga:pixelsize=13;2"
 font-1 = "Wuncon Siji:pixelsize=14;2"
 font-2 = "Siji:pixelsize=14;2"
-font-3 = "Iosevka Nerd Font Mono:pixelsize=24;4"
-font-4 = "Iosevka Nerd Font Mono:pixelsize=18;4"
+font-3 = "Font Awesome:pixelsize=14;2"
+font-4 = "Iosevka Nerd Font Mono:pixelsize=24;4"
+font-5 = "Iosevka Nerd Font Mono:pixelsize=18;4"
 
 
-modules-left = logo pad i3 pad window
+modules-left = pad i3 pad window
 modules-center = 
-modules-right = pulseaudio pad cpu pad memory pad eth pad uptime pad date
+modules-right = pulseaudio pad filesystem pad cpu pad memory pad eth pad uptime pad date
 
 
 [module/eth]
 type = internal/network
-interface =  enp37s0
+interface =  eno1
 interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
 
 format-connected-foreground        = ${colors.foreground}
-format-connected-background        = ${colors.bg-alt}
-format-connected-prefix            = 
-format-connected-prefix-foreground = ${colors.green}
-format-connected-prefix-padding    = 1
+format-connected-background        = ${colors.bg}
 label-connected                    = %local_ip%
-label-connected-foreground = ${colors.foreground}
+label-connected-foreground = ${colors.green}
 label-connected-padding            = 1
 
 [module/filesystem]
@@ -84,7 +83,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#78a9ff}%mountpoint%%{F-} %percentage_used%%
+label-mounted = %{F#78a9ff}SPACE:%{F-} %used% / %total%
 format-background = ${colors.bg-alt}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
@@ -96,16 +95,16 @@ use-ui-max = false
 
 format-volume            = <ramp-volume><label-volume>
 format-volume-foreground = ${colors.foreground}
-format-volume-background = ${colors.bg-alt}
+format-volume-background = ${colors.bg}
 label-volume             = %percentage%%
 label-volume-foreground = ${colors.foreground}
 label-volume-padding     = 1
 
-format-muted-foreground     = ${colors.alert}
+format-muted-foreground     = ${colors.red}
 format-muted-background     = ${self.format-volume-background}
-format-muted-prefix         = ﱝ
+format-muted-prefix         = X
 format-muted-prefix-padding = 1
-label-muted-foreground = ${colors.foreground}
+abel-muted-foreground = ${colors.foreground}
 label-muted                 = Muted
 label-muted-padding         = ${self.label-volume-padding}
 
@@ -115,7 +114,7 @@ ramp-volume-2 = 墳
 ramp-volume-3 = 
 ramp-volume-4 = 
 ramp-volume-padding = 1
-ramp-volume-foreground = ${colors.cyan}
+ramp-volume-foreground = ${colors.blue}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -127,7 +126,7 @@ click-right = pavucontrol&
 type = custom/text
 content = "ﬦ"
 content-foreground = ${colors.orange}
-content-font = 5
+content-font = 3
 
 [module/window]
 type = internal/xwindow
@@ -160,7 +159,7 @@ label-padding = 2
 
 label-focused = %icon% 
 label-focused-background = ${colors.bg-dark}
-label-focused-foreground = ${colors.cyan}
+label-focused-foreground = ${colors.white}
 label-focused-underline = ${colors.cyan}
 label-focused-padding = 2
 
@@ -183,13 +182,13 @@ label-empty-padding = 2
 type = internal/cpu
 interval = 2
 
-format-prefix            = 
-format-padding    = 3
-format-prefix-foreground = ${colors.red}
+format-prefix            = "CPU:"
+format-padding    = 2
+format-prefix-foreground = ${colors.blue}
 label                    = %percentage:2%%
 label-foreground = ${colors.foreground}
-format-background = ${colors.bg-alt}
-format-prefix-padding = 1
+format-background = ${colors.bg}
+format-prefix-padding = 0
 label-padding = 1
 
 
@@ -198,10 +197,10 @@ type = custom/script
 exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
 interval = 100
 label = %output%
-format-background = ${colors.bg-alt}
-format-prefix-padding = 1
+format-background = ${colors.bg}
+format-prefix-padding = 0
 label-padding = 1
-format-prefix = "ﰇ"
+format-prefix = "UPTIME:"
 format-prefix-foreground = ${colors.blue}
 
 [module/date]
@@ -225,11 +224,12 @@ time-alt              = %A, %d %B %Y
 type = internal/memory
 interval = 2
 
-format-prefix            = 
+format-prefix         = "RAM:"
 format-padding = 0
-format-prefix-foreground = ${colors.orange}
-format-background = ${colors.bg-alt}
-format-prefix-padding = 1
-label                    = %mb_used%
+format-prefix-foreground = ${colors.blue}
+format-background = ${colors.bg}
+format-prefix-padding = 0
+label                    = %gb_used% / %gb_free%
 label-foreground = ${colors.foreground}
 label-padding            = 1
+

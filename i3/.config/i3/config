@@ -1,9 +1,10 @@
 set $mod Mod4
 
-font pango:Iosevka Nerd Font Bold 12
+font pango:PragmataPro Mono Liga 12
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# Setup Monitors
 exec_always --no-startup-id ~/.screenlayout/dual.sh
 
 exec --no-startup-id nm-applet
@@ -69,8 +70,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $pmon DP-0
-set $smon DP-4
+set $primary_monitor DisplayPort-0
+set $secondary_monitor DisplayPort-1
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -85,16 +86,16 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-workspace $ws1 output $pmon
-workspace $ws2 output $pmon
-workspace $ws3 output $pmon
-workspace $ws4 output $pmon
-workspace $ws5 output $pmon
-workspace $ws6 output $smon
-workspace $ws7 output $smon
-workspace $ws8 output $smon
-workspace $ws9 output $smon
-workspace $ws10 output $smon
+workspace $ws1 output $primary_monitor
+workspace $ws2 output $primary_monitor
+workspace $ws3 output $primary_monitor
+workspace $ws4 output $primary_monitor
+workspace $ws5 output $primary_monitor
+workspace $ws6 output $secondary_monitor
+workspace $ws7 output $secondary_monitor
+workspace $ws8 output $secondary_monitor
+workspace $ws9 output $secondary_monitor
+workspace $ws10 output $secondary_monitor
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -126,29 +127,17 @@ bindsym $mod+Shift+S exec scrot ~/screenshots/%Y-%m-%d-%T-screenshot.png
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -157,7 +146,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set background on startup
-exec_always --no-startup-id feh --bg-scale /home/synoet/wallpapers/black_hole.jpg  --bg-scale /home/synoet/wallpapers/black.jpg
+exec_always --no-startup-id feh --bg-scale /home/synoet/Downloads/tokyo.jpg
 
 #refresh fonts before launching polybar
 exec_always --no-startup-id fc-cache -f
@@ -170,11 +159,11 @@ exec_always --no-startup-id picom --experimental-backends --backend glx --xrende
 
 bindsym $mod+space exec ~/.config/rofi/launch.sh
 
-gaps inner 10
+gaps inner 15
 
 for_window [class="^.*"] border pixel 1
 # class                         border          background      text            indicator       child_border
-client.focused                  #FF8F40         #0d1017         #dde1e6         #FF8F40         #FF8F40
+client.focused                  #7aa2f7         #0d1017         #dde1e6         #7aa2f7         #7aa2f7
 client.focused_inactive         #82cfff         #0d1017         #525252         $coloratt       #000000
 client.unfocused                #1C212B         #0d1017         #888888         $coloratt       #000000
 client.urgent                   #2f343a         #0d1017         #ffffff         $coloratt       #900000
