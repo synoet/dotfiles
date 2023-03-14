@@ -59,5 +59,6 @@ return require('packer').startup(function()
   use "sindrets/diffview.nvim"
 
   use "folke/tokyonight.nvim"
+  use 'AlexvZyl/nordic.nvim'
 
 end)

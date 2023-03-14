@@ -229,7 +229,7 @@ format-padding = 0
 format-prefix-foreground = ${colors.blue}
 format-background = ${colors.bg}
 format-prefix-padding = 0
-label                    = %gb_used% / %gb_free%
+label                    = %gb_used% / %gb_total%
 label-foreground = ${colors.foreground}
 label-padding            = 1
 
