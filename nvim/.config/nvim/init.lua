@@ -51,7 +51,8 @@ return require('packer').startup(function()
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use "akinsho/bufferline.nvim"
+  -- use "akinsho/bufferline.nvim"
+  use "romgrk/barbar.nvim"
   use "nvim-lualine/lualine.nvim"
   use "nvim-neo-tree/neo-tree.nvim"
   use "SmiteshP/nvim-navic"
