@@ -1,6 +1,7 @@
 set $mod Mod4
 
-font pango:PragmataPro Mono Liga 12
+# font pango:PragmataPro Mono Liga 12
+font pango:Berkeley Mono 12
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 

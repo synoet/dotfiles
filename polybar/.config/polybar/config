@@ -51,7 +51,8 @@ padding-right = 2
 module-margin-left = 0
 odule-margin-right = 0
 
-font-0 = "PragmataPro Mono Liga:pixelsize=13;2"
+# font-0 = "PragmataPro Mono Liga:pixelsize=13;2"
+font-0 = "Berkeley Mono:pixelsize=13;2"
 font-1 = "Wuncon Siji:pixelsize=14;2"
 font-2 = "Siji:pixelsize=14;2"
 font-3 = "Font Awesome:pixelsize=14;2"

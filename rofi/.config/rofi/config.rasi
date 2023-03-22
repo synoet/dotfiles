@@ -26,8 +26,8 @@ configuration {
   magenta: #bd93f9;
   blue:    #61bfff;
 
-  text-font:      "PragmataPro Mono Liga 15";
-  text-mono-font: "PragmataPro Mono Liga 13";
+  text-font:      "Berkeley Mono 15";
+  text-mono-font: "Berkeley Mono Liga 13";
   icon-font:      "FontAwesome 16";
 
   background-color: transparent;
