@@ -63,7 +63,7 @@ require('mason-null-ls').setup({
 
 require("mason-lspconfig").setup()
 
-require('mason-null-ls').setup_handlers()
+-- require('mason-null-ls').setup_handlers()
 
 require('lsp_lines').setup()
 

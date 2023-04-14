@@ -12,6 +12,10 @@ require("indent_blankline").setup {
 
 require("nvim-navic").setup{}
 
+require("todo-comments").setup{}
+
 require("treesitter-context").setup {
   enable = true,
 }
+
+require "lsp_signature".setup()

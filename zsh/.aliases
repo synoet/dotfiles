@@ -6,7 +6,10 @@ alias pacman="sudo pacman"
 alias c="clear"
 alias ls="exa --long --header --git"
 alias lsa="exa --long --header --git -a"
+
 alias ssh-me="ssh-add ~/.ssh/personal"
+
 alias cat="bat --theme='base16-256'"
 alias shot="scrot ~/screenshots/%b%d::%H%M%S.png"
 
+alias varus="python3 /home/synoet/dev/varus/main.py"

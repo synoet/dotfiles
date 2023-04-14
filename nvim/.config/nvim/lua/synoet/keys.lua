@@ -8,6 +8,7 @@ keymap("n", "<Leader>f", ":HopWord<CR>", opts)
 keymap("n", "<C-v>", ":vsplit<CR>", opts)
 
 -- Comment Keymaps
+keymap("v", "<C-/>", ":Commentary<CR>", opts)
 keymap("n", "<C-/>", ":Commentary<CR>", opts)
 
 -- Split Navigation
@@ -25,7 +26,7 @@ keymap("v", "<C-x>", ":lua require('telescope').extensions.refactoring.refactors
 
 
 -- LSP Keybindings
-keymap("n", "<C-r>", ":LspRestart <CR>", opts)
+keymap("n", "<C-r>", ":LspRestart <CR> :e! <CR>", opts) --refresh file
 
 -- Buffer Navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)

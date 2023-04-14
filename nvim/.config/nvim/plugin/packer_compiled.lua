@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/synoet/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -240,6 +245,11 @@ _G.packer_plugins = {
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/synoet/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
@@ -249,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/synoet/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/synoet/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   }
 }
 

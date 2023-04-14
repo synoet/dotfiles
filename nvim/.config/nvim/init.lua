@@ -44,6 +44,10 @@ return require('packer').startup(function()
   use "lukas-reineke/indent-blankline.nvim"
   use "phaazon/hop.nvim"
   use "brenoprata10/nvim-highlight-colors"
+  use "folke/todo-comments.nvim"
+  use "tpope/vim-commentary"
+  use "mhartington/formatter.nvim"
+  use "ray-x/lsp_signature.nvim"
 
   -- ui
   use "MunifTanjim/nui.nvim"
@@ -51,7 +55,7 @@ return require('packer').startup(function()
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  -- use "akinsho/bufferline.nvim"
+
   use "romgrk/barbar.nvim"
   use "nvim-lualine/lualine.nvim"
   use "nvim-neo-tree/neo-tree.nvim"

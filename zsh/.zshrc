@@ -31,3 +31,5 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 source $HOME/dotfiles/zsh/.aliases
 eval "$(ssh-agent -s)" > /dev/null
 export GPG_TTY=$(tty)
+
+ssh-me > /dev/null
