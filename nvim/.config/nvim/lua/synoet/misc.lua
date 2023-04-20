@@ -14,6 +14,8 @@ require("nvim-navic").setup{}
 
 require("todo-comments").setup{}
 
+require("diffview").setup{}
+
 require("treesitter-context").setup {
   enable = true,
 }

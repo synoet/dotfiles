@@ -7,8 +7,9 @@ export EDITOR='nvim'
 # zsh plugins
 plugins=(
   git
-  zsh-autosuggestions
   zsh-syntax-highlighting
+#  zsh-vi-mode
+  zsh-autosuggestions
   colorize
   fzf-tab
 )

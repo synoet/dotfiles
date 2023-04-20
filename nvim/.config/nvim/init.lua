@@ -48,6 +48,10 @@ return require('packer').startup(function()
   use "tpope/vim-commentary"
   use "mhartington/formatter.nvim"
   use "ray-x/lsp_signature.nvim"
+  use "sindrets/diffview.nvim"
+  use {'akinsho/git-conflict.nvim', tag = "*", config = function()
+    require('git-conflict').setup()
+  end}
 
   -- ui
   use "MunifTanjim/nui.nvim"
