@@ -21,3 +21,5 @@ require("treesitter-context").setup {
 }
 
 require "lsp_signature".setup()
+
+require("neoai").setup()

@@ -15,6 +15,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.secrets.zsh
 
 enable-fzf-tab
 
@@ -34,3 +35,6 @@ eval "$(ssh-agent -s)" > /dev/null
 export GPG_TTY=$(tty)
 
 ssh-me > /dev/null
+
+export FLYCTL_INSTALL="/home/synoet/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"

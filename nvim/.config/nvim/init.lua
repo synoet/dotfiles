@@ -39,6 +39,7 @@ return require('packer').startup(function()
   use "github/copilot.vim"
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
+  use "Bryley/neoai.nvim"
 
   -- misc
   use "lukas-reineke/indent-blankline.nvim"
