@@ -4,6 +4,9 @@ vim.opt.termguicolors = true
 -- require("barbar").setup{}
 
 require("telescope").setup{
+  defaults = {
+    file_ignore_patterns = {"node_modules"},
+  },
   extensions = {
     fzf = {
       fuzzy = true,

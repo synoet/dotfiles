@@ -15,13 +15,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.secrets.zsh
 
 enable-fzf-tab
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)" >/dev/null
 
 export PATH=$PATH:/home/synoet/.local/bin
 
@@ -38,3 +33,5 @@ ssh-me > /dev/null
 
 export FLYCTL_INSTALL="/home/synoet/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+source /Users/synoet/dotfiles/nvim/.config/nvim/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export GPG_TTY=$(tty)

@@ -24,6 +24,7 @@ keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
 keymap("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("v", "<C-x>", ":lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
 keymap("n", "<C-i>", ":lua require('lsp_lines').toggle()<CR>", opts)
+keymap("n", "<C-t>", ":NeoTreeFocusToggle<CR>", opts)
 
 
 -- LSP Keybindings

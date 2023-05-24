@@ -1,4 +1,5 @@
 require('synoet.options')
+require('synoet.autocmd')
 require('synoet.colorscheme')
 require('synoet.treesitter')
 require('synoet.lsp')
