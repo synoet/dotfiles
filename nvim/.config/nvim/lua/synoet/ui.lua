@@ -1,26 +1,5 @@
 vim.opt.termguicolors = true
 
--- require("bufferline").setup{}
--- require("barbar").setup{}
-
-require("telescope").setup{
-  defaults = {
-    file_ignore_patterns = {"node_modules"},
-  },
-  extensions = {
-    fzf = {
-      fuzzy = true,
-      override_generic_sorter = true,
-      override_file_sorter = true,
-      case_mode = "smart_case",
-    }
-  }
-}
-
-require('telescope').load_extension('fzf')
-require('telescope').load_extension("refactoring")
-
-
 require('lualine').setup {
   options = {
     theme = 'tokyonight'
@@ -43,3 +22,7 @@ require("trouble").setup {
   auto_closer = false,
 }
 
+
+require("fzf-lua").setup({
+  "max-perf",
+})

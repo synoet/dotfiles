@@ -9,12 +9,7 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 
-
-require("nvim-navic").setup{}
-
 require("todo-comments").setup{}
-
-require("diffview").setup{}
 
 require("treesitter-context").setup {
   enable = true,
@@ -22,4 +17,3 @@ require("treesitter-context").setup {
 
 require "lsp_signature".setup()
 
-require("neoai").setup()

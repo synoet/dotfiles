@@ -3,8 +3,25 @@ local cmp = require('cmp')
 
 lsp.preset('recommended')
 lsp.nvim_workspace()
-
 lsp.setup_nvim_cmp({
+  window = {
+    completion = {
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      col_offset = -3,
+      side_padding = 0,
+    },
+  },
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      kind.kind = " " .. (strings[1] or "") .. " "
+      kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+      return kind
+    end,
+  },
   mapping = {
     ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<C-j>"] = cmp.mapping(function(fallback)
@@ -72,3 +89,6 @@ local util = require('lspconfig/util')
 require("lspconfig").pyright.setup({
   root_dir = util.root_pattern('pyproject.toml', 'setup.py', 'setup.cfg', '.git'),
 })
+
+require"fidget".setup{}
+

@@ -8,8 +8,8 @@ keymap("n", "<Leader>f", ":HopWord<CR>", opts)
 keymap("n", "<C-v>", ":vsplit<CR>", opts)
 
 -- Comment Keymaps
-keymap("v", "<C-/>", ":Commentary<CR>", opts)
-keymap("n", "<C-/>", ":Commentary<CR>", opts)
+keymap("v", "<C-c>", ":Commentary<CR>", opts)
+keymap("n", "<C-c>", ":Commentary<CR>", opts)
 
 -- Split Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -18,11 +18,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Telescope Keybindings
-keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
-keymap("n", "<C-f>", ":Telescope live_grep<CR>", opts)
-keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
-keymap("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
-keymap("v", "<C-x>", ":lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
+keymap("n", "<C-p>", ":FzfLua files<CR>", opts)
+keymap("n", "<C-f>", ":FzfLua live_grep_native<CR>", opts)
+keymap("n", "<C-b>", ":FzfLua  buffers<CR>", opts)
+keymap("n", "<C-s>", ":FzfLua <CR>", opts)
 keymap("n", "<C-i>", ":lua require('lsp_lines').toggle()<CR>", opts)
 keymap("n", "<C-t>", ":NeoTreeFocusToggle<CR>", opts)
 

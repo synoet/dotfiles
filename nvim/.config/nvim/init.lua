@@ -20,7 +20,6 @@ return require('packer').startup(function()
   use "jay-babu/mason-null-ls.nvim"
   use "folke/trouble.nvim"
   use "VonHeikemen/lsp-zero.nvim"
-  use "ThePrimeagen/refactoring.nvim"
 
   use({
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
@@ -34,13 +33,14 @@ return require('packer').startup(function()
 
   -- completion
   use "hrsh7th/nvim-cmp"
+  use "onsails/lspkind.nvim"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-buffer"
   use "github/copilot.vim"
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
-  use "Bryley/neoai.nvim"
+  use "j-hui/fidget.nvim"
 
   -- misc
   use "lukas-reineke/indent-blankline.nvim"
@@ -50,26 +50,21 @@ return require('packer').startup(function()
   use "tpope/vim-commentary"
   use "mhartington/formatter.nvim"
   use "ray-x/lsp_signature.nvim"
-  use "sindrets/diffview.nvim"
-  use {'akinsho/git-conflict.nvim', tag = "*", config = function()
-    require('git-conflict').setup()
-  end}
 
   -- ui
   use "MunifTanjim/nui.nvim"
-  use "kyazdani42/nvim-web-devicons"
   use "nvim-lua/plenary.nvim"
-  use "nvim-telescope/telescope.nvim"
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use "kyazdani42/nvim-web-devicons"
+  use { 'ibhagwan/fzf-lua',
+    -- optional for icon support
+    requires = { 'nvim-tree/nvim-web-devicons' }
+  }
 
   use "romgrk/barbar.nvim"
   use "nvim-lualine/lualine.nvim"
   use "nvim-neo-tree/neo-tree.nvim"
-  use "SmiteshP/nvim-navic"
   use "lewis6991/gitsigns.nvim"
-  use "sindrets/diffview.nvim"
 
   use "folke/tokyonight.nvim"
-  use 'AlexvZyl/nordic.nvim'
 
 end)
