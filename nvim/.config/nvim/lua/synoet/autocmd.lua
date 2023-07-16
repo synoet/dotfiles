@@ -12,3 +12,10 @@ augroup ToggleCommandOnInsert
   autocmd InsertLeave * let g:command_enabled = 1 | lua require('lsp_lines').toggle()
 augroup END
 ]])
+
+vim.cmd([[
+  augroup AutoOrderBuffer
+  autocmd!
+  autocmd BufWinEnter * BufferOrderByBufferNumber
+  augroup END
+]])

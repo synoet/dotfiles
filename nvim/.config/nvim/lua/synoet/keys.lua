@@ -32,6 +32,7 @@ keymap("n", "<C-r>", ":LspRestart <CR> :e! <CR>", opts) --refresh file
 -- Buffer Navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-w>", ":bdelete<CR>", opts)
 
 -- Visual Mode Indentation 
 keymap("v", "<", "<gv", opts)

@@ -33,5 +33,17 @@ ssh-me > /dev/null
 
 export FLYCTL_INSTALL="/home/synoet/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-source /Users/synoet/dotfiles/nvim/.config/nvim/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export GPG_TTY=$(tty)
+
+ssh-add --apple-use-keychain ~/personal &> /dev/null
+
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':fzf-tab:*' switch-group ',' '.'
+source /Users/synoet/deps/emsdk/emsdk_env.sh &> /dev/null
+eval "$(zoxide init zsh)"
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

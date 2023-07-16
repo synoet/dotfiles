@@ -24,5 +24,5 @@ require("trouble").setup {
 
 
 require("fzf-lua").setup({
-  "max-perf",
+  "telescope",
 })

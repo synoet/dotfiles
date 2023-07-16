@@ -41,6 +41,10 @@ return require('packer').startup(function()
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
   use "j-hui/fidget.nvim"
+  use {
+    "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
 
   -- misc
   use "lukas-reineke/indent-blankline.nvim"
@@ -66,5 +70,12 @@ return require('packer').startup(function()
   use "lewis6991/gitsigns.nvim"
 
   use "folke/tokyonight.nvim"
+-- install without yarn or npm
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 end)
