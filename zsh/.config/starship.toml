@@ -35,3 +35,6 @@ disabled = true
 
 [python]
 disabled = false
+
+[aws]
+disabled = true

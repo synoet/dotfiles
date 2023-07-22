@@ -8,11 +8,14 @@ export EDITOR='nvim'
 plugins=(
   git
   zsh-syntax-highlighting
-#  zsh-vi-mode
-  zsh-autosuggestions
+  zsh-vi-mode
+  # zsh-autosuggestions
   colorize
   fzf-tab
 )
+
+# enable vim mode
+bindkey -v
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,3 +50,13 @@ source /Users/synoet/deps/emsdk/emsdk_env.sh &> /dev/null
 eval "$(zoxide init zsh)"
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/synoet/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+if [ -f '/Users/synoet/.cdwe.zsh' ]; then . '/Users/synoet/.cdwe.zsh'; fi

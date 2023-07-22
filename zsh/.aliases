@@ -3,6 +3,7 @@
 alias cp="cp -v"
 alias mv="mv -v"
 alias pacman="sudo pacman"
+alias cd="cdwe"
 
 
 alias c="clear"
