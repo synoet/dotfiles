@@ -7,15 +7,13 @@ export EDITOR='nvim'
 # zsh plugins
 plugins=(
   git
+  zsh-completions
   zsh-syntax-highlighting
   zsh-vi-mode
-  # zsh-autosuggestions
+  zsh-autosuggestions
   colorize
   fzf-tab
 )
-
-# enable vim mode
-bindkey -v
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,5 +56,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
+
+
+
+
 
 if [ -f '/Users/synoet/.cdwe.zsh' ]; then . '/Users/synoet/.cdwe.zsh'; fi

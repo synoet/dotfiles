@@ -1,12 +1,12 @@
 require('synoet.options')
 require('synoet.autocmd')
+require('synoet.ui')
 require('synoet.colorscheme')
 require('synoet.treesitter')
 require('synoet.lsp')
 require('synoet.coding')
 require('synoet.misc')
 require('synoet.keys')
-require('synoet.ui')
 
 
 return require('packer').startup(function()
@@ -70,7 +70,12 @@ return require('packer').startup(function()
   use "lewis6991/gitsigns.nvim"
 
   use "folke/tokyonight.nvim"
--- install without yarn or npm
+  use "sainnhe/sonokai"
+
+  use "Shatur/neovim-ayu"
+  use "folke/zen-mode.nvim"
+
+
   use({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
