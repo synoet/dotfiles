@@ -23,7 +23,7 @@ return require('packer').startup(function()
 
   use({
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    config = function()
+    run = function()
       require("lsp_lines").setup()
     end,
   })
@@ -68,13 +68,9 @@ return require('packer').startup(function()
   use "nvim-lualine/lualine.nvim"
   use "nvim-neo-tree/neo-tree.nvim"
   use "lewis6991/gitsigns.nvim"
-
   use "folke/tokyonight.nvim"
-  use "sainnhe/sonokai"
-
-  use "Shatur/neovim-ayu"
   use "folke/zen-mode.nvim"
-
+  use 'sunjon/shade.nvim'
 
   use({
       "iamcco/markdown-preview.nvim",

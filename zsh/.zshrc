@@ -58,9 +58,4 @@ esac
 # pnpm end
 
 
-
-
-
-
-
 if [ -f '/Users/synoet/.cdwe.zsh' ]; then . '/Users/synoet/.cdwe.zsh'; fi

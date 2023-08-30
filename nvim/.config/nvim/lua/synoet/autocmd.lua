@@ -19,3 +19,4 @@ vim.cmd([[
   autocmd BufWinEnter * BufferOrderByBufferNumber
   augroup END
 ]])
+

@@ -6,6 +6,7 @@ keymap("n", "<Leader>f", ":HopWord<CR>", opts)
 
 -- Split Keymaps
 keymap("n", "<C-v>", ":vsplit<CR>", opts)
+keymap("n", "<C-x", ":split<CR>", opts)
 
 -- Comment Keymaps
 keymap("v", "<C-c>", ":Commentary<CR>", opts)
@@ -25,6 +26,8 @@ keymap("n", "<C-s>", ":FzfLua <CR>", opts)
 keymap("n", "<C-i>", ":lua require('lsp_lines').toggle()<CR>", opts)
 keymap("n", "<C-a>", ":FzfLua lsp_code_actions<CR>", opts)
 keymap("n", "<C-t>", ":NeoTreeFocusToggle<CR>", opts)
+
+keymap("n", "<C-g>", ":vsplit<CR>gd", opts)
 
 
 -- LSP Keybindings
