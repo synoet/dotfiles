@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export BAT_THEME="Base16"
 export GPG_TTY=$(tty)
 export EDITOR='nvim'
+export BAT_THEME="base16-256"
 
 # zsh plugins
 plugins=(
@@ -59,3 +60,10 @@ esac
 
 
 if [ -f '/Users/synoet/.cdwe.zsh' ]; then . '/Users/synoet/.cdwe.zsh'; fi
+
+# bun completions
+[ -s "/Users/synoet/.bun/_bun" ] && source "/Users/synoet/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -69,6 +69,8 @@ return require('packer').startup(function()
   use "nvim-neo-tree/neo-tree.nvim"
   use "lewis6991/gitsigns.nvim"
   use "folke/tokyonight.nvim"
+  use "sainnhe/sonokai"
+  use "sainnhe/gruvbox-material"
   use "folke/zen-mode.nvim"
   use 'sunjon/shade.nvim'
 

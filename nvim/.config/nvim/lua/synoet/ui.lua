@@ -3,7 +3,7 @@ vim.opt.termguicolors = true
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'tokyonight',
+    theme = 'gruvbox-material',
     component_separators = { left = ' ', right = ' '},
     section_separators = { left = ' ', right = ' '},
     disabled_filetypes = {
@@ -72,7 +72,10 @@ require("zen-mode").setup {
 
 
 require("fzf-lua").setup({
-  "telescope",
+  "fzf-native",
+  winopts = {
+    split = "botright new"  -- open in split below current window
+  }
 })
 
 require'shade'.setup({
@@ -84,4 +87,3 @@ require'shade'.setup({
     toggle           = '<Leader>s',
   }
 })  
-
