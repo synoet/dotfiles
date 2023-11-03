@@ -72,7 +72,6 @@ return require('packer').startup(function()
   use "sainnhe/sonokai"
   use "sainnhe/gruvbox-material"
   use "folke/zen-mode.nvim"
-  use 'sunjon/shade.nvim'
 
   use({
       "iamcco/markdown-preview.nvim",

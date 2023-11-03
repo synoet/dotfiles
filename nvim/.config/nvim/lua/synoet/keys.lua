@@ -18,14 +18,18 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Telescope Keybindings
+-- Fzf-Lua Keybindings
 keymap("n", "<C-p>", ":FzfLua files<CR>", opts)
-keymap("n", "<C-f>", ":FzfLua live_grep_native<CR>", opts)
+keymap("n", "<C-f>", ":FzfLua live_grep<CR>", opts)
 keymap("n", "<C-b>", ":FzfLua  buffers<CR>", opts)
 keymap("n", "<C-s>", ":FzfLua <CR>", opts)
 keymap("n", "<C-i>", ":lua require('lsp_lines').toggle()<CR>", opts)
 keymap("n", "<C-a>", ":FzfLua lsp_code_actions<CR>", opts)
 keymap("n", "<C-t>", ":NeoTreeFocusToggle<CR>", opts)
+
+keymap('n', '<C-d>', '<C-d>:normal! zz<CR>', opts)
+keymap('n', '<C-u>', '<C-u>:normal! zz<CR>', opts)
+
 
 keymap("n", "<C-g>", ":vsplit<CR>gd", opts)
 

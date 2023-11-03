@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["colorful-winsep.nvim"] = {
-    loaded = true,
-    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/colorful-winsep.nvim",
-    url = "https://github.com/nvim-zh/colorful-winsep.nvim"
-  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -133,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["hop.nvim"] = {
     loaded = true,
@@ -249,6 +249,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["shade.nvim"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/shade.nvim",
+    url = "https://github.com/sunjon/shade.nvim"
+  },
+  sonokai = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
   },
   ["todo-comments.nvim"] = {
     loaded = true,
