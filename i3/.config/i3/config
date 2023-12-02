@@ -164,9 +164,9 @@ gaps inner 15
 
 for_window [class="^.*"] border pixel 1
 # class                         border          background      text            indicator       child_border
-client.focused                  #7aa2f7         #0d1017         #dde1e6         #7aa2f7         #7aa2f7
-client.focused_inactive         #82cfff         #0d1017         #525252         $coloratt       #000000
-client.unfocused                #1C212B         #0d1017         #888888         $coloratt       #000000
-client.urgent                   #2f343a         #0d1017         #ffffff         $coloratt       #900000
-client.placeholder              #000000         #0d1017         #ffffff         $coloratt       #0c0c0c
+client.focused                  #a89984         #282828         #d4be98         #a89984         #a89984
+client.focused_inactive         #a89984         #282828         #a89984         $coloratt       #000000
+client.unfocused                #32302f         #282828         #a89984         $coloratt       #000000
+client.urgent                   #2f343a         #282828         #ffffff         $coloratt       #900000
+client.placeholder              #000000         #282828         #ffffff         $coloratt       #0c0c0c
 
