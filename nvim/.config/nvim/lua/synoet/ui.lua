@@ -63,13 +63,6 @@ require("trouble").setup {
   auto_closer = false,
 }
 
-require("zen-mode").setup {
-  window = {
-    width = 175
-
-  }
-}
-
 require("fzf-lua").setup({
   "fzf-native",
   winopts = {

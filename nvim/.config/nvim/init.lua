@@ -49,7 +49,6 @@ return require('packer').startup(function()
   -- misc
   use "lukas-reineke/indent-blankline.nvim"
   use "phaazon/hop.nvim"
-  use "brenoprata10/nvim-highlight-colors"
   use "folke/todo-comments.nvim"
   use "tpope/vim-commentary"
   use "mhartington/formatter.nvim"
@@ -68,18 +67,8 @@ return require('packer').startup(function()
   use "nvim-lualine/lualine.nvim"
   use "nvim-neo-tree/neo-tree.nvim"
   use "lewis6991/gitsigns.nvim"
-  use "folke/tokyonight.nvim"
-  use "sainnhe/sonokai"
   use "sainnhe/gruvbox-material"
-  use "folke/zen-mode.nvim"
-
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
-
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
   use 'simrat39/rust-tools.nvim'
+  use "sindrets/diffview.nvim" 
 
 end)
