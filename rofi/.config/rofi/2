@@ -19,7 +19,7 @@ configuration {
   bg-focus: #32302f;
   bg-dark:  #1b1b1b;
   fg:       #d4be98;
-  fg-list:  #d4be98;
+  fg-list:  #bbc2cf;
   on:       #8BD49C;
   off:      #cc6666;
 

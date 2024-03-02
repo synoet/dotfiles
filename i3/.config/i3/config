@@ -147,7 +147,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set background on startup
-exec_always --no-startup-id feh --bg-scale /home/synoet/dotfiles/wallpapers/eternity_4k.png /home/synoet/dotfiles/wallpapers/leftspace.png
+exec_always --no-startup-id feh --bg-fill /home/synoet/Downloads/loupe-mono-dark.jpg
 
 #refresh fonts before launching polybar
 exec_always --no-startup-id fc-cache -f

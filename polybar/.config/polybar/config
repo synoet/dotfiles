@@ -2,19 +2,19 @@
 [colors]
 cyan = #7dcfff
 magenta = #bb9af7
-white=#c0caf5
-blue = #7aa2f7
+white=#d4be98
+beige = #ddc7a1
 yellow= #e0af68
 green = #9ece6a
 red = #f7768e
 orange = #e0af68
 
-bg = #1a1b26
-fg = ${colors.white}
-bg-alt = #131721
-fg-alt = #414868
-bg-dark = #15161e
-bg-light = #11151C
+bg = #32302f
+fg = #d4be98 
+bg-alt = #3c3836
+fg-alt = #a89984
+bg-dark = #3c3836
+bg-light = #3c3836
 fg-lighter = #414868
 
 alert = ${colors.yellow}
@@ -75,7 +75,7 @@ unknown-as-up = true
 format-connected-foreground        = ${colors.foreground}
 format-connected-background        = ${colors.bg}
 label-connected                    = %local_ip%
-label-connected-foreground = ${colors.green}
+label-connected-foreground = ${colors.fg-alt}
 label-connected-padding            = 1
 
 [module/filesystem]
@@ -84,7 +84,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#78a9ff}SPACE:%{F-} %used% / %total%
+label-mounted = %{F#a89984}SPACE:%{F-} %used% / %total%
 format-background = ${colors.bg-alt}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
@@ -170,7 +170,7 @@ label-occupied-padding = 2
 
 label-unfocused-padding = 2
 label-unfocused = %icon%
-label-unfocused-foreground = ${colors.fg-lighter}
+label-unfocused-foreground = ${colors.fg-alt}
 
 label-urgent-foreground = ${colors.red}
 label-urgent-padding = 2
@@ -185,7 +185,7 @@ interval = 2
 
 format-prefix            = "CPU:"
 format-padding    = 2
-format-prefix-foreground = ${colors.blue}
+format-prefix-foreground = ${colors.fg-alt}
 label                    = %percentage:2%%
 label-foreground = ${colors.foreground}
 format-background = ${colors.bg}
@@ -202,7 +202,7 @@ format-background = ${colors.bg}
 format-prefix-padding = 0
 label-padding = 1
 format-prefix = "UPTIME:"
-format-prefix-foreground = ${colors.blue}
+format-prefix-foreground = ${colors.fg-alt}
 
 [module/date]
 type = internal/date
@@ -227,7 +227,7 @@ interval = 2
 
 format-prefix         = "RAM:"
 format-padding = 0
-format-prefix-foreground = ${colors.blue}
+format-prefix-foreground = ${colors.fg-alt}
 format-background = ${colors.bg}
 format-prefix-padding = 0
 label                    = %gb_used% / %gb_total%

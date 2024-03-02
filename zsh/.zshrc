@@ -12,7 +12,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-vi-mode
   zsh-autosuggestions
-  colorize
+  # colorize
   fzf-tab
 )
 
@@ -67,3 +67,7 @@ if [ -f '/Users/synoet/.cdwe.zsh' ]; then . '/Users/synoet/.cdwe.zsh'; fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+if [ -f '/home/synoet/.cdwe.zsh' ]; then . '/home/synoet/.cdwe.zsh'; fi
+
+# source "/home/synoet/dev/emsdk/emsdk_env.sh"
