@@ -1,2 +1,9 @@
 require('hop').setup{}
-require('nvim-highlight-colors').setup {}
+require("rust-tools").setup {}
+require("copilot").setup({
+  suggestion  = {
+    enabled = true,
+    auto_trigger = true,
+  }
+})
+

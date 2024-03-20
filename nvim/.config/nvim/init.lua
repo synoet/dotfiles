@@ -37,7 +37,8 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-buffer"
-  use "github/copilot.vim"
+  -- use "github/copilot.vim"
+  use { "zbirenbaum/copilot.lua" }
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
   use "j-hui/fidget.nvim"
@@ -49,7 +50,6 @@ return require('packer').startup(function()
   -- misc
   use "lukas-reineke/indent-blankline.nvim"
   use "phaazon/hop.nvim"
-  use "brenoprata10/nvim-highlight-colors"
   use "folke/todo-comments.nvim"
   use "tpope/vim-commentary"
   use "mhartington/formatter.nvim"
@@ -68,18 +68,15 @@ return require('packer').startup(function()
   use "nvim-lualine/lualine.nvim"
   use "nvim-neo-tree/neo-tree.nvim"
   use "lewis6991/gitsigns.nvim"
-  use "folke/tokyonight.nvim"
-  use "sainnhe/sonokai"
   use "sainnhe/gruvbox-material"
-  use "folke/zen-mode.nvim"
-
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
-
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
   use 'simrat39/rust-tools.nvim'
+  use "sindrets/diffview.nvim" 
+  -- nushell
+  use "LhKipp/nvim-nu"
+  use 'sbdchd/neoformat'
+  use 'kassio/neoterm'
+  use "rebelot/kanagawa.nvim"
+  use "EdenEast/nightfox.nvim" -- Packer
+
 
 end)

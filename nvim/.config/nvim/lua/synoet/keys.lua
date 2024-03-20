@@ -2,6 +2,14 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 vim.api.nvim_set_var("mapleader", ",")
 
+function GrepVisual()
+    vim.cmd("FzfLua grep_visual")
+end
+
+-- Map your key to the Lua function
+keymap("v", "<C-f>", "<cmd>lua GrepVisual()<CR>", opts)
+
+-- keymap("v", "<Leader>f", ":GrepVisual<CR>", opts)
 keymap("n", "<Leader>f", ":HopWord<CR>", opts)
 
 -- Split Keymaps
@@ -26,6 +34,7 @@ keymap("n", "<C-s>", ":FzfLua <CR>", opts)
 keymap("n", "<C-i>", ":lua require('lsp_lines').toggle()<CR>", opts)
 keymap("n", "<C-a>", ":FzfLua lsp_code_actions<CR>", opts)
 keymap("n", "<C-t>", ":NeoTreeFocusToggle<CR>", opts)
+
 
 keymap('n', '<C-d>', '<C-d>:normal! zz<CR>', opts)
 keymap('n', '<C-u>', '<C-u>:normal! zz<CR>', opts)
