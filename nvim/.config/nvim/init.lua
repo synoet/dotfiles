@@ -37,7 +37,6 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-buffer"
-  -- use "github/copilot.vim"
   use { "zbirenbaum/copilot.lua" }
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
@@ -71,12 +70,11 @@ return require('packer').startup(function()
   use "sainnhe/gruvbox-material"
   use 'simrat39/rust-tools.nvim'
   use "sindrets/diffview.nvim" 
-  -- nushell
-  use "LhKipp/nvim-nu"
   use 'sbdchd/neoformat'
   use 'kassio/neoterm'
-  use "rebelot/kanagawa.nvim"
-  use "EdenEast/nightfox.nvim" -- Packer
+  use "NeogitOrg/neogit"
+  use "tpope/vim-fugitive"
+  use 'voldikss/vim-floaterm'
 
 
 end)

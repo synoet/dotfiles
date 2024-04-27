@@ -8,10 +8,10 @@ export BAT_THEME="base16-256"
 # zsh plugins
 plugins=(
   git
-  zsh-completions
   zsh-syntax-highlighting
-  zsh-vi-mode
+  zsh-completions
   zsh-autosuggestions
+  # zsh-vi-mode
   # colorize
   fzf-tab
 )
@@ -58,3 +58,5 @@ if [ -f '/home/synoet/.cdwe.zsh' ]; then . '/home/synoet/.cdwe.zsh'; fi
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.cargo/env"  

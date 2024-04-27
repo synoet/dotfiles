@@ -10,6 +10,9 @@ exec_always --no-startup-id ~/.screenlayout/dual.sh
 
 exec --no-startup-id nm-applet
 
+exec --no-startup-id systemctl start docker 
+
+
 workspace_layout tabbed
 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -24,10 +27,10 @@ bindsym $mod+Return exec kitty
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+semicolon focus right
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -53,6 +56,8 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+bindsym Control+Shift+4 exec flameshot gui
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -160,7 +165,7 @@ exec_always --no-startup-id picom --experimental-backends --backend glx --xrende
 
 bindsym $mod+space exec ~/.config/rofi/launch.sh
 
-gaps inner 15
+gaps inner 5
 
 for_window [class="^.*"] border pixel 1
 # class                         border          background      text            indicator       child_border
