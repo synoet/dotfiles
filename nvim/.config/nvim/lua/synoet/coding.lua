@@ -6,4 +6,3 @@ require("copilot").setup({
   }
 })
 require("neogit").setup {}
-require("rust-tools").setup {}

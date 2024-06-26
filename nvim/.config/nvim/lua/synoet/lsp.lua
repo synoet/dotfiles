@@ -73,8 +73,8 @@ null_ls.setup({
 
 require('mason-null-ls').setup({
   ensure_installed = nil,
-  automatic_installation = true, -- You can still set this to `true`
-  automatic_setup = true,
+  -- automatic_installation = true, -- You can still set this to `true`
+  -- automatic_setup = true,
 })
 
 require("mason-lspconfig").setup()
@@ -87,9 +87,6 @@ require("lspconfig").pyright.setup({
   root_dir = util.root_pattern('pyproject.toml', 'setup.py', 'setup.cfg', '.git'),
 });
 
-require("lspconfig").rust_analyzer.setup {
-  on_attach = on_attach
-}
 
 
 require"fidget".setup{}

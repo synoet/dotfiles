@@ -38,6 +38,12 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-buffer"
   use { "zbirenbaum/copilot.lua" }
+  use {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({})
+    end,
+  }
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
   use "j-hui/fidget.nvim"
@@ -68,13 +74,12 @@ return require('packer').startup(function()
   use "nvim-neo-tree/neo-tree.nvim"
   use "lewis6991/gitsigns.nvim"
   use "sainnhe/gruvbox-material"
-  use 'simrat39/rust-tools.nvim'
   use "sindrets/diffview.nvim" 
   use 'sbdchd/neoformat'
   use 'kassio/neoterm'
   use "NeogitOrg/neogit"
   use "tpope/vim-fugitive"
-  use 'voldikss/vim-floaterm'
+  use 'mg979/vim-visual-multi'
 
 
 end)
