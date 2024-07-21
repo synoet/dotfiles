@@ -2,8 +2,8 @@ right_format = """$cmd_duration$time"""
 add_newline = true
 
 [username]
-style_user = "yellow bold"
-style_root = "red bold"
+style_user = "yellow"
+style_root = "red"
 format = "[synoet::]($style)"
 disabled = false
 show_always = true
@@ -14,8 +14,8 @@ truncation_symbol = ""
 format= "[$branch]($style) "
 
 [git_metrics]
-added_style = "bold blue"
-deleted_style = "bold red"
+added_style = "blue"
+deleted_style = "red"
 format = '\[[+$added]($added_style) [-$deleted]($deleted_style)\] '
 only_nonzero_diffs = false
 disabled = false
@@ -37,4 +37,13 @@ disabled = true
 disabled = false
 
 [aws]
+disabled = true
+
+[rust]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[lua]
 disabled = true

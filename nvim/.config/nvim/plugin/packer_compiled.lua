@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -174,6 +179,11 @@ _G.packer_plugins = {
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -198,6 +208,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
+  },
+  neoterm = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/neoterm",
+    url = "https://github.com/kassio/neoterm"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -230,6 +250,11 @@ _G.packer_plugins = {
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/nvim-nu",
     url = "https://github.com/LhKipp/nvim-nu"
   },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/nvim-pack/nvim-spectre"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -244,6 +269,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["octo.nvim"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/octo.nvim",
+    url = "https://github.com/pwntester/octo.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -260,6 +290,11 @@ _G.packer_plugins = {
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   ["todo-comments.nvim"] = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
@@ -274,6 +309,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["zenbones.nvim"] = {
+    loaded = true,
+    path = "/Users/synoet/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
+    url = "https://github.com/zenbones-theme/zenbones.nvim"
   }
 }
 

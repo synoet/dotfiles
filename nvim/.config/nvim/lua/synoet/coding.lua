@@ -7,3 +7,4 @@ require("copilot").setup({
   }
 })
 
+require('spectre').setup()

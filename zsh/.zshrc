@@ -10,7 +10,6 @@ plugins=(
   git
   zsh-completions
   zsh-syntax-highlighting
-  zsh-vi-mode
   zsh-autosuggestions
   colorize
   fzf-tab
@@ -58,9 +57,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-
-if [ -f '/Users/synoet/.cdwe.zsh' ]; then . '/Users/synoet/.cdwe.zsh'; fi
-
 # bun completions
 [ -s "/Users/synoet/.bun/_bun" ] && source "/Users/synoet/.bun/_bun"
 
@@ -71,3 +67,7 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+export PATH
+
+if [ -f '/Users/synoet/.cdwe.zsh' ]; then . '/Users/synoet/.cdwe.zsh'; fi
