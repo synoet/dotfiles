@@ -16,8 +16,6 @@ return require('packer').startup(function()
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
-  use "jose-elias-alvarez/null-ls.nvim"
-  use "jay-babu/mason-null-ls.nvim"
   use "folke/trouble.nvim"
   use "VonHeikemen/lsp-zero.nvim"
 
@@ -37,7 +35,6 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-buffer"
-  use { "zbirenbaum/copilot.lua" }
   use {
     "supermaven-inc/supermaven-nvim",
     config = function()
@@ -80,6 +77,14 @@ return require('packer').startup(function()
   use "NeogitOrg/neogit"
   use "tpope/vim-fugitive"
   use 'mg979/vim-visual-multi'
+  use "sainnhe/everforest"
+use {
+    "zenbones-theme/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    requires = "rktjmp/lush.nvim"
+}
 
 
 end)

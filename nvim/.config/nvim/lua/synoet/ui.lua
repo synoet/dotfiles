@@ -47,15 +47,7 @@ require('lualine').setup {
   extensions = {}
 }
 
-require('gitsigns').setup {
-  signs = {
-    add          = {hl = 'GitSignsAdd'   , text = ' +', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
-    change       = {hl = 'GitSignsChange', text = ' ~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-    delete       = {hl = 'GitSignsDelete', text = ' -', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-    topdelete    = {hl = 'GitSignsDelete', text = ' -', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-    changedelete = {hl = 'GitSignsChange', text = ' ~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-  },
-}
+require('gitsigns').setup {}
 
 require("trouble").setup {
   position = "left",
@@ -64,8 +56,8 @@ require("trouble").setup {
 }
 
 require("fzf-lua").setup({
-  "fzf-native",
-  winopts = {
-    split = "botright new",  -- open in split below current window
-  }
+  -- "fzf-native",
+  -- winopts = {
+  --   split = "botright new",  -- open in split below current window
+  -- }
 })

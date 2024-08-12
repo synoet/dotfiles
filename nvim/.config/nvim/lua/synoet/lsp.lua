@@ -1,9 +1,26 @@
-local lsp = require('lsp-zero')
+local mason = require('mason')
+local mason_lspconfig = require("mason-lspconfig")
+local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
 
-lsp.preset('recommended')
-lsp.nvim_workspace()
-lsp.setup_nvim_cmp({
+mason.setup({})
+mason_lspconfig.setup({
+  ensure_installed = {},
+  handlers = {
+    function(server_name)
+      require('lspconfig')[server_name].setup({})
+    end,
+  },
+})
+
+lsp_zero.on_attach(function(_client, bufnr)
+  lsp_zero.default_keymaps({
+    buffer = bufnr,
+    preserve_mappings = false
+  })
+end)
+
+cmp.setup({
   window = {
     completion = {
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
@@ -52,42 +69,10 @@ lsp.setup_nvim_cmp({
   }
 })
 
+require('lsp_lines').setup()
+require('fidget').setup{}
+
 vim.diagnostic.config({
   virtual_text = false,
   virtual_lines = true,
 })
-
-lsp.setup()
-
-local null_ls = require('null-ls')
-local null_opts = lsp.build_options('null-ls', {})
-
-null_ls.setup({
-  on_attach = function(client, bufnr)
-    null_opts.on_attach(client, bufnr)
-  end,
-  sources = {
-    -- You can add tools not supported by mason.nvim
-  }
-})
-
-require('mason-null-ls').setup({
-  ensure_installed = nil,
-  -- automatic_installation = true, -- You can still set this to `true`
-  -- automatic_setup = true,
-})
-
-require("mason-lspconfig").setup()
-
-require('lsp_lines').setup()
-
-local util = require('lspconfig/util')
-
-require("lspconfig").pyright.setup({
-  root_dir = util.root_pattern('pyproject.toml', 'setup.py', 'setup.cfg', '.git'),
-});
-
-
-
-require"fidget".setup{}
-
