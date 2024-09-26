@@ -33,7 +33,7 @@ keymap("n", "<C-b>", ":FzfLua  buffers<CR>", opts)
 keymap("n", "<C-s>", ":FzfLua <CR>", opts)
 keymap("n", "<C-i>", ":lua require('lsp_lines').toggle()<CR>", opts)
 keymap("n", "<C-a>", ":FzfLua lsp_code_actions<CR>", opts)
-keymap("n", "<C-t>", ":NeoTreeFocusToggle<CR>", opts)
+keymap("n", "<C-t>", ":Neotree<CR>", opts)
 
 
 keymap('n', '<C-d>', '<C-d>:normal! zz<CR>', opts)

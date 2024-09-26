@@ -3,8 +3,8 @@ vim.cmd[[
     set termguicolors
   endif
 ]]
-vim.cmd[[colorscheme gruvbox-material]]
-
+vim.cmd[[let g:everforest_background = 'hard']]
+vim.cmd[[colorscheme everforest]]
 vim.cmd[[set clipboard+=unnamedplus]]
 vim.cmd[[set encoding=UTF-8]]
 

@@ -1,7 +1,7 @@
 require('synoet.options')
+require('synoet.colorscheme')
 require('synoet.autocmd')
 require('synoet.ui')
-require('synoet.colorscheme')
 require('synoet.treesitter')
 require('synoet.lsp')
 require('synoet.coding')
@@ -78,13 +78,15 @@ return require('packer').startup(function()
   use "tpope/vim-fugitive"
   use 'mg979/vim-visual-multi'
   use "sainnhe/everforest"
-use {
-    "zenbones-theme/zenbones.nvim",
-    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-    -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    requires = "rktjmp/lush.nvim"
-}
-
-
+  use 'mhartington/formatter.nvim'
+  use({
+    "neanias/everforest-nvim",
+    -- Optional; default configuration will be used if setup isn't called.
+    config = function()
+      require("everforest").setup({
+        background = "hard",
+      })
+    end,
+  })
 end)
+

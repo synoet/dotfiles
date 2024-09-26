@@ -1,18 +1,9 @@
 #!/usr/bin/zsh
-
 alias cp="cp -v"
 alias mv="mv -v"
-alias pacman="sudo pacman"
-alias cd="cdwe"
-
-
 alias c="clear"
-alias ls="exa --long --header"
-alias lsa="exa --long --header -a"
-
-alias ssh-me="ssh-add ~/.ssh/personal &> /dev/null"
-
+alias ls="eza --long --header"
+alias lsa="eza --long --header -a"
+alias cd="z"
 alias cat="bat"
-alias shot="scrot ~/screenshots/%b%d::%H%M%S.png"
-
-alias varus="python3 /home/synoet/dev/varus/main.py"
+alias ssh-me="ssh-add ~/.ssh/personal &> /dev/null"
