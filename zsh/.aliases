@@ -1,9 +1,0 @@
-#!/usr/bin/zsh
-alias cp="cp -v"
-alias mv="mv -v"
-alias c="clear"
-alias ls="eza --long --header"
-alias lsa="eza --long --header -a"
-alias cd="z"
-alias cat="bat"
-alias ssh-me="ssh-add ~/.ssh/personal &> /dev/null"

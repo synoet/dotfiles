@@ -1,2 +1,0 @@
-# decrease mouse acceleration
-xinput set-prop 20 341 -0.8

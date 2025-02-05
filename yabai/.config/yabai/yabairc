@@ -1,8 +1,0 @@
-# .yabairc
-
-# set all spaces to floating layout
-yabai -m config layout float
-
-# setting number of spaces (workspaces)
-yabai -m config spaces 4
-
