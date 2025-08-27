@@ -18,7 +18,7 @@ local function set_status(window, workspace)
 	local gui_win = window:gui_window()
 	local base_path = string.gsub(workspace, "(.*[/\\])(.*)", "%2")
 	gui_win:set_left_status(wezterm.format({
-		{ Foreground = { Color = "#ffffff" } },
+		{ Foreground = { Color = "#d4b398" } },
 		{ Text = " ::" .. base_path .. "  " },
 	}))
 end
@@ -42,86 +42,54 @@ wezterm.on("gui-startup", function(cmd)
 end)
 
 config.leader = { key = " ", mods = "CTRL" }
-local colors = {
-    bg = "#161718",        -- Based on hsl(210, 4, 9)
-    bg_0 = "#141619",      -- Based on hsl(210, 6, 10)
-    bg_1 = "#17191d",      -- Based on hsl(210, 6, 12)
-    bg_2 = "#1a1d21",      -- Based on hsl(210, 6, 14)
-    bg_3 = "#202329",      -- Based on hsl(210, 6, 18)
-    bg_4 = "#25282f",      -- Based on hsl(210, 6, 21)
-    bg_5 = "#2a2e36",      -- Based on hsl(210, 6, 24)
-    red = "#e67e80",       -- Based on hsl(359, 68, 70)
-    orange = "#ed7547",    -- Based on hsl(11, 81, 68)
-    orange_dim = "#e8865e", -- Based on hsl(11, 60, 70)
-    yellow = "#F2CE88",    -- Based on hsl(40, 95, 74)
-    green_dim = "#59cc99", -- Based on hsl(150, 60, 60)
-    blue_dim = "#7DC4E8",  -- Based on hsl(200, 70, 70)
-    blue_bright = "#6EE0F7", -- Based on hsl(190, 90, 70)
-    green_bright = "#7DE8B3", -- Based on hsl(150, 70, 70)
-    purple = "#C190DA",    -- Based on hsl(280, 60, 80)
-    fg = "#e5aa8a",        -- Based on hsl(21, 100, 80)
-    fg_0 = "#f3e6db",      -- Based on hsl(30, 15, 90)
-    fg_1 = "#bfb5aa",      -- Based on hsl(30, 10, 75)
-    fg_2 = "#928c85",      -- Based on hsl(30, 5, 60)
-    fg_3 = "#554e47",      -- Based on hsl(30, 5, 35)
+
+config.colors = {
+  -- Backgrounds
+  background = '#1d2021', -- bg0
+  foreground = '#d4be98', -- fg0
+  cursor_bg = '#d4be98',
+  cursor_fg = '#1d2021',
+  cursor_border = '#d4be98',
+  selection_bg = '#504945', -- bg5
+  selection_fg = '#d4be98',
+  ansi = {
+    '#282828', -- black (bg1)
+    '#ea6962', -- red
+    '#a9b665', -- green
+    '#d8a657', -- yellow
+    '#7daea3', -- blue
+    '#d3869b', -- purple
+    '#89b482', -- aqua (note: you had typo "896482")
+    '#d4be98', -- white (fg0)
+  },
+  brights = {
+    '#928374', -- bright black (grey1)
+    '#ea6962', -- bright red
+    '#a9b665', -- bright green
+    '#d8a657', -- bright yellow
+    '#7daea3', -- bright blue
+    '#d3869b', -- bright purple
+    '#89b482', -- bright aqua
+    '#ddc7a1', -- bright white (fg1)
+  },
+  tab_bar = {
+    background = '#1d2021', -- bg_dim
+    active_tab = {
+      bg_color = '#282828', -- bg1
+      fg_color = '#d4be98',
+    },
+    inactive_tab = {
+      bg_color = '#1d2021', -- bg0
+      fg_color = '#928374', -- grey1
+    },
+    inactive_tab_hover = {
+      bg_color = '#32302f', -- bg_statusline2
+      fg_color = '#d4be98',
+    },
+  },
 }
 
-local custom_theme = {
-    foreground = colors.fg_1,
-    background = colors.bg,
-    cursor_bg = colors.fg_1,
-    cursor_fg = colors.bg,
-    cursor_border = colors.green_bright,
-    selection_bg = colors.bg_4,
-    selection_fg = colors.fg_0,
-    split = colors.bg_3,
-    ansi = {
-        colors.bg_3,       -- Black
-        colors.red,        -- Red
-        colors.green_bright, -- Green
-        colors.yellow,     -- Yellow
-        colors.blue_dim,   -- Blue
-        colors.purple,     -- Magenta
-        colors.blue_bright, -- Cyan
-        colors.fg_1,       -- White
-    },
-    brights = {
-        colors.fg_1,       -- Bright black
-        colors.red,        -- Bright red
-        colors.green_bright, -- Bright green
-        colors.yellow,     -- Bright yellow
-        colors.blue_bright, -- Bright blue
-        colors.purple,     -- Bright magenta
-        colors.blue_bright, -- Bright cyan
-        colors.fg_0,       -- Bright white
-    },
-    -- Tab bar
-    tab_bar = {
-        background = colors.bg,
-        active_tab = {
-            bg_color = colors.bg_1,
-            fg_color = colors.green_bright,
-        },
-        inactive_tab = {
-            bg_color = colors.bg,
-            fg_color = colors.fg_1,
-        },
-        inactive_tab_hover = {
-            bg_color = colors.bg_0,
-            fg_color = colors.fg_0,
-        },
-        new_tab = {
-            bg_color = colors.bg,
-            fg_color = colors.fg_2,
-        },
-        new_tab_hover = {
-            bg_color = colors.bg_0,
-            fg_color = colors.fg_0,
-        },
-    },
-}
-
-config.colors = custom_theme
+-- config.colors = custom_theme
 
 config.keys = {
 	{

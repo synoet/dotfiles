@@ -1,0 +1,23 @@
+return {
+  {
+    "gruvbox-community/gruvbox",
+    name = "gruvbox",
+    init = function()
+      -- Set gruvbox contrast before loading
+      vim.g.gruvbox_contrast_dark = "hard"
+      vim.g.gruvbox_contrast_light = "hard"
+
+      vim.opt.background = "light"
+      -- Enable true color support
+      vim.opt.termguicolors = true
+    end,
+  },
+  {
+    "AstroNvim/astroui",
+    ---@type AstroUIOpts
+    opts = {
+      background = "light",
+      colorscheme = "gruvbox",
+    },
+  },
+}

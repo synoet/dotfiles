@@ -10,5 +10,5 @@ return {
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
-  { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.search.grug-far-nvim" },
 }
