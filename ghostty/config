@@ -1,0 +1,24 @@
+# The configuration can be reloaded at runtime by cmd+shift+, (macOS). 
+
+theme = light:GruvboxLightHard,dark:GruvboxDarkHard
+
+font-family = "Berkeley Mono"
+font-size = 14
+
+mouse-hide-while-typing = true
+cursor-style-blink = false
+cursor-style = block
+adjust-cursor-thickness = 300%
+
+confirm-close-surface = false
+
+window-theme = system
+
+resize-overlay = never
+
+window-save-state = always
+
+shell-integration = fish
+window-inherit-working-directory=true
+
+keybind = shift+enter=text:\n
