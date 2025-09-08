@@ -1,5 +1,4 @@
 # The configuration can be reloaded at runtime by cmd+shift+, (macOS). 
-
 theme = light:GruvboxLightHard,dark:GruvboxDarkHard
 
 font-family = "Berkeley Mono"

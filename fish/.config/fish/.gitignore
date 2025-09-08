@@ -1,0 +1,23 @@
+# Fish shell generated files
+fish_variables
+fishd.*
+functions/
+
+# Fish completions cache
+completions/
+
+# Fish history
+fish_history
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Local overrides (optional)
+config_local.fish
