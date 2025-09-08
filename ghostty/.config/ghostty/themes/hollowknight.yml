@@ -1,0 +1,25 @@
+
+# Hollow Knight — Abyss (dark)
+palette = 0=#0b0f14
+palette = 1=#e06c75
+palette = 2=#86c990
+palette = 3=#e6c17a
+palette = 4=#87b3ff
+palette = 5=#c59ff4
+palette = 6=#6fc1b6
+palette = 7=#aebbcc
+palette = 8=#2a3340
+palette = 9=#ff7a85
+palette = 10=#9be09b
+palette = 11=#f3cf8a
+palette = 12=#98beff
+palette = 13=#e2b6ff
+palette = 14=#9be5df
+palette = 15=#c9d7e6
+
+background = #0b0f14
+foreground = #c9d7e6
+cursor-color = #7bdaf3
+cursor-text = #0b0f14
+selection-background = #141b24
+selection-foreground = #c9d7e6
