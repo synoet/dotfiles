@@ -8,6 +8,6 @@ return {
     vim.g.gruvbox_material_enable_italic = true
     vim.g.gruvbox_material_diagnostic_text_highlight = 1
     vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
-    vim.opts.colorscheme = 'gruvbox-material'
+    -- vim.opts.colorscheme = 'gruvbox-material'
   end,
 }

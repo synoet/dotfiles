@@ -2,7 +2,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.motion.hop-nvim" },
   { import = "astrocommunity.completion.supermaven-nvim" },
   { import = "astrocommunity.motion.before-nvim" },

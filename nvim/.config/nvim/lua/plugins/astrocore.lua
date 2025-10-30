@@ -18,9 +18,25 @@ return {
       notifications = false, -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
+    -- In your astrocore opts.diagnostics section, replace with:
     diagnostics = {
-      virtual_text = true,
+      virtual_text = {
+        prefix = "[!]",  -- Could be '■', '▎', 'x'
+        source = "if_many",  -- Or "always" to always show source
+        spacing = 4,
+      },
+      signs = true,
       underline = true,
+      update_in_insert = false,
+      severity_sort = true,
+      float = {
+        focused = false,
+        style = "minimal",
+        border = "rounded",
+        source = true,
+        header = "",
+        prefix = "",
+      },
     },
     -- vim options can be configured here
     options = {
