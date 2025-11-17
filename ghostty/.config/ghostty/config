@@ -1,6 +1,6 @@
 # The configuration can be reloaded at runtime by cmd+shift+, (macOS). 
 # theme = moonfly
-theme = gruvbox-material-hard-dark
+theme = kanso.conf
 
 font-family = "Berkeley Mono"
 font-size = 14
