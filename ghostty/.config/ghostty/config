@@ -1,5 +1,6 @@
 # The configuration can be reloaded at runtime by cmd+shift+, (macOS). 
-theme = "vague.conf"
+# theme = moonfly
+theme = gruvbox-material-hard-dark
 
 font-family = "Berkeley Mono"
 font-size = 14
