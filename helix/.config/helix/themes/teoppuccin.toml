@@ -1,0 +1,9 @@
+# ~/.config/helix/themes/catppuccin_frappe_custom.toml
+inherits = "catppuccin_frappe"
+
+[palette]
+green = "#9ed576"
+yellow = "#d1b57d"
+base = "#14181F"
+mantle = "#14181F"
+crust = "#14181F"
